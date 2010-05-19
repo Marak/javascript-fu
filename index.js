@@ -9,4 +9,6 @@ exports.time = require('./lib/time');
 exports.currency = require('./lib/currency');
 
 
+sys.puts(this.date.getMonthNumberFromName('march'));
+
 sys.puts(JSON.stringify(exports));
