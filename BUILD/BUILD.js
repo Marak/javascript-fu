@@ -23,33 +23,59 @@ var lib = paths('./lib');
 
 var format= require('../index');
 
-// generate bundle for code on the browser
-for(var module in format){
-  code += ( '\n' + 'format.' + module + ' = {};');
-  for(var method in format[module]){
-    code += ( '\n' + 'format.' + module);
-    code += ( '.' + method + ' = ');
-    try{
-    code += (format[module][method].toString() + ';\n');
-    }
-    catch(err){
-      
+
+function moduleTree(level, context){
+  // generate bundle for code on the browser
+  for(var module in level){
+    code += ( '\n' + ''+context+'.' + module + ' = {};');
+    for(var method in level[module]){
+      code += ( '\n' + ''+context+'.' + module);
+      code += ( '.' + method + ' = ');
+      if( typeof level[module][method] == 'object'){
+        moduleTree( level[module][method], method);
+      }
+      else{
+        try{
+          code += (level[module][method].toString() + ';\n');
+        }
+        catch(err){
+          code += ('fiiii' + ';\n');
+          
+        }
+      }
     }
   }
 }
 
-// generate nice tree of api for docs
-docs.API += '<ul>';
-for(var module in format){
-  docs.API += '<li>' + module;
-    docs.API += '<ul>'
-    for(var method in format[module]){
-      docs.API += '<li>' + method + '</li>';
-    }
-    docs.API += '</ul>';
-  docs.API += '</li>';
+moduleTree(format, 'format');
+
+
+
+function docsTree(level){
+
+  // generate nice tree of api for docs
+  docs.API += '<ul>';
+  for(var method in level){
+    docs.API += '<li>' + method;
+      docs.API += '<ul>'
+      if(typeof level[method] == 'object' && method != 'CultureInfo'){
+        docsTree(level[method]);
+      }
+      else{
+       // docs.API += '<li>' + method + '</li>';
+      }
+      docs.API += '</ul>';
+    docs.API += '</li>';
+  }
+  docs.API += '</ul>';
+
+
 }
-docs.API += '</ul>';
+
+
+docsTree(format);
+
+
 
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
