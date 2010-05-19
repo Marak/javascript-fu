@@ -8,7 +8,7 @@ var format = require('../index');
 
 function isNumber( n ){
   
-  sys.puts('isNumber ' + n)
+//  sys.puts('isNumber ' + n)
   
   if(n.toString() == 'NaN'){
     return [false, 'NaN, nananana!'];  
