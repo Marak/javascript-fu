@@ -1,1 +1,6 @@
-formatting lib
+# format.js - dominate your strings
+<img src = "http://imgur.com/32UFx.jpg" border = "0">
+## API
+<ul><li>types<ul><li>isNumber</li><li>isText</li></ul></li><li>inflector<ul><li>camelize</li><li>classify</li><li>constantize</li><li>dasherize</li><li>demodulize</li><li>foreign_key</li><li>humanize</li><li>inflections</li><li>ordinalize</li><li>pluralize</li><li>singularize</li><li>tableize</li><li>titleize</li><li>underscore</li></ul></li><li>number<ul><li>toNumber</li><li>toPercent</li></ul></li><li>string<ul><li>stripNumbers</li><li>getNumbers</li><li>stripLetters</li><li>getLetters</li></ul></li><li>date<ul><li>toDate</li><li>getMonthNumberFromName</li><li>getDayNumberFromName</li><li>CultureInfo</li><li>isLeapYear</li><li>getDaysInMonth</li><li>getTimezoneOffset</li><li>getTimezoneAbbreviation</li><li>_validate</li><li>validateMillisecond</li><li>validateSecond</li><li>validateMinute</li><li>validateHour</li><li>validateDay</li><li>validateMonth</li><li>validateYear</li><li>now</li><li>today</li><li>Parsing</li><li>Grammar</li><li>Translator</li><li>_parse</li><li>parse</li><li>getParseFunction</li><li>parseExact</li></ul></li><li>time<ul><li>toTime</li><li>toSeconds</li><li>toMinutes</li><li>toHours</li><li>toDays</li><li>toMonths</li><li>toYears</li></ul></li><li>currency<ul><li>toDollars</li><li>toPennies</li><li>toNickels</li><li>toDimes</li><li>toQuarters</li><li>toEuros</li><li>toCanadian</li></ul></li></ul>
+## Authors
+####Marak Squires 
