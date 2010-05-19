@@ -6,16 +6,6 @@ var sys = require('sys');
 
 var format = require('../index');
 
-
-function assertIsNumber(n){
-  if(n instanceof Number == true){
-    return assert.ok();
-  }
-  else{
-    return assert.fail();
-  }
-}
-
 vows.describe('format.js library').addVows({
   "toNumber()": {
     "on an instance of Number": {
