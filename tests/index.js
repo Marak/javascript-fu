@@ -7,6 +7,9 @@ var sys = require('sys');
 var format = require('../index');
 
 function isNumber( n ){
+  
+  sys.puts('isNumber ' + n)
+  
   if(n.toString() == 'NaN'){
     return [false, 'NaN, nananana!'];  
   }
@@ -56,12 +59,18 @@ vows.describe('format.js library').addVows({
     "can format money string as number":function( n ){
       var result = isNumber( format.number.toNumber( n ) );
       assert.ok( result[0], result[1] );
+    }},
+    "on a number with currency symbols": {
+    topic: '$42.00',
+    "can format money string as number":function( n ){
+      var result = isNumber( format.number.toNumber( n ) );
+      assert.ok( result[0], result[1] );
     }}
   }
 });
 
 
-sys.puts(format.number.toNumber('42,000'));
+//sys.puts(format.number.toNumber('42,000'));
 
 /*
 
