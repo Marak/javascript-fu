@@ -67,25 +67,13 @@ vows.describe('format.js lib/types').addVows({
           assert.ok( true );
         }
         else{
-          assert.ok( false, '"' + s + '"' + ' is a string');
+          assert.ok( false, '"' + s + '"' + ' is not a string');
         }
       }
     },
     "on a string literal ": {
       topic: 'foo',
       "this is not a string":function( s ){
-        var result = format.types.isString( s );
-        if( !result ){
-          assert.ok( true );
-        }
-        else{
-          assert.ok( false, '"' + s + '"' + ' is a string');
-        }
-      }
-    },
-    "on a number literal": {
-      topic: 1234,
-      "this is not a number":function( s ){
         var result = format.types.isString( s );
         if( !result ){
           assert.ok( true );
@@ -99,7 +87,7 @@ vows.describe('format.js lib/types').addVows({
       topic: new Array(1,2,3),
       "this is not a string":function( s ){
         var result = format.types.isString( s );
-        if( result ){
+        if( !result ){
           assert.ok( true );
         }
         else{
@@ -111,7 +99,7 @@ vows.describe('format.js lib/types').addVows({
       topic: {},
       "this is not a string":function( s ){
         var result = format.types.isString( s );
-        if( result ){
+        if( !result ){
           assert.ok( true );
         }
         else{
@@ -119,5 +107,20 @@ vows.describe('format.js lib/types').addVows({
         }
       }
     }
+  },
+  "isDate()": {
+    "on a date instance": {
+      topic: new Date(),
+      "this is a date":function( s ){
+        var result = format.types.isDate( s );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a date');
+        }
+      }
+    }
   }
+  
 });
