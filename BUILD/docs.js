@@ -1,4 +1,4 @@
-# format.js - dominate your strings
+# format.js - dominate your inputs
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 
 ## API
