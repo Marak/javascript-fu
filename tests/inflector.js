@@ -34,35 +34,32 @@ var eachPair = function(fn){
 //load test cases
 var cases = require('./inflections');
 
-vows.describe('format.js lib/inflector').addVows({
-	"pluralize()": {
-		"run through rails pluralization test cases": {
-			topic: cases.SingularToPlural, 
-			'all cases match results': function(singularToPlural) {
-			  			  
-			  function testPair(singular, plural){
-			    var result = inflector.pluralize(singular);
-			    var eql = !!(plural === result);
-			    assert.ok(eql, singular + " should pluralize to:" + plural+ ", instead it was:"+result);
-			  };
-			  			  
-			  eachPair.call(singularToPlural, testPair);
-			}
-		}
-	},
-	
-	"singularize()": {
-		"run through rails test cases": {
-			topic: cases.SingularToPlural, 
-			'all cases match results': function(singularToPlural) {			  
-			  function testPair(singular, plural){
-			    var result = inflector.singularize(plural);
-			    var eql = !!(singular === result);
-			    assert.ok(eql, plural + " should singularize to:" + singular+ ", instead it was:"+result);
-			  };
-			  			  
-			  eachPair.call(singularToPlural, testPair);
-			}
-		}
-	}
+var myVows = {};
+
+myVows["pluralize()"] = {};
+var railsPluralizations = myVows["pluralize()"]["run through test cases"] = {
+  topc: "rails pluralization cases"
+};
+
+eachPair.call(cases.SingularToPlural, function(singular, plural){
+  railsPluralizations["pluralize "+ singular] = function(){
+    var result = inflector.pluralize(singular);
+    var eql = !!(plural === result);
+    assert.ok(eql, singular + " should pluralize to:" + plural+ ", instead it was:"+result);
+  };
 });
+
+myVows["singularize()"] = {};
+var railsPluralizations = myVows["singularize()"]["run through test cases"] = {
+  topc: "rails singularization cases"
+};
+
+eachPair.call(cases.SingularToPlural, function(singular, plural){
+  railsPluralizations["singularize "+ plural] = function(){
+    var result = inflector.singularize(plural);
+    var eql = !!(singular === result);
+    assert.ok(eql, plural + " should singularize to:" + singular+ ", instead it was:"+result);
+  };
+});
+
+vows.describe('format.js lib/inflector').addVows(myVows);
