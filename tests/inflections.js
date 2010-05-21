@@ -129,16 +129,6 @@ exports.CamelWithModuleToUnderscoreWithSlash = {
 	"UsersSection::CommissionDepartment": "users_section/commission_department"
 };
 
-exports.ClassNameToForeignKeyWithUnderscore = {
-	"Person": "person_id",
-	"MyApplication::Billing::Account": "account_id"
-};
-
-exports.ClassNameToForeignKeyWithoutUnderscore = {
-	"Person": "personid",
-	"MyApplication::Billing::Account": "accountid"
-};
-
 exports.ClassNameToTableName = {
 	"PrimarySpokesman": "primary_spokesmen",
 	"NodeChild": "node_children"

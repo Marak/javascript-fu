@@ -62,5 +62,27 @@ eachPair.call(cases.SingularToPlural, function(singular, plural){
   };
 });
 
+
+myVows["underscore()"] = {};
+var railsUnderscores = myVows["underscore()"]["run through test cases"] = {
+  topc: "rails underscore cases"
+};
+
+[
+  cases.CamelToUnderscore,
+  cases.CamelToUnderscoreWithoutReverse,
+  cases.CamelWithModuleToUnderscoreWithSlash
+].map(function(e, i){
+  eachPair.call(e, function(from, to){
+    railsUnderscores["underscore "+ from] = function(){
+      var result = inflector.underscore(from);
+      var eql = !!(to === result);
+      assert.ok(eql, from + " should underscore to:" + to+ ", instead it was:"+result);
+    };
+  });
+})
+
+
+
 vows.describe('format.js lib/inflector').addVows(myVows);
 
