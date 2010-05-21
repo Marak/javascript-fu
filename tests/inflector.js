@@ -36,19 +36,8 @@ var cases = require('./inflections');
 
 var myVows = {};
 
-myVows["pluralize()"] = {};
-var railsPluralizations = myVows["pluralize()"]["run through test cases"] = {
-  topc: "rails pluralization cases"
-};
 
-eachPair.call(cases.SingularToPlural, function(singular, plural){
-  railsPluralizations["pluralize "+ singular] = function(){
-    var result = inflector.pluralize(singular);
-    var eql = !!(plural === result);
-    assert.ok(eql, singular + " should pluralize to:" + plural+ ", instead it was:"+result);
-  };
-});
-
+//from and two are switched, as singularize's test data is the inverse of pluralize
 myVows["singularize()"] = {};
 var railsSingularizations = myVows["singularize()"]["run through test cases"] = {
   topc: "rails singularization cases"
@@ -62,40 +51,31 @@ eachPair.call(cases.SingularToPlural, function(singular, plural){
   };
 });
 
+//generic form!
+function testSuiteBuilder(kind, collections){
+  myVows[kind+"()"] = {};
+   myVows[kind+"()"]["run through test cases"] = {
+    topc: "rails "+kind+" cases"
+  };
 
-myVows["underscore()"] = {};
-var railsUnderscores = myVows["underscore()"]["run through test cases"] = {
-  topc: "rails underscore cases"
-};
+  collections.forEach(function(collection){
+    eachPair.call(collection, function(from, to){
+        myVows[kind+"()"]["run through test cases"][kind+" "+ from] = function(){
+          var result = inflector[kind](from);
+          var eql = !!(to === result);
+          assert.ok(eql, from + " should+ "+kind+" to:" + to+ ", instead it was:"+result);
+        };
+    });    
+  })
+}
 
-[
+testSuiteBuilder("pluralize", [cases.SingularToPlural]);
+testSuiteBuilder("titleize", [cases.MixtureToTitleCase]);
+testSuiteBuilder("underscore", [
   cases.CamelToUnderscore,
   cases.CamelToUnderscoreWithoutReverse,
   cases.CamelWithModuleToUnderscoreWithSlash
-].map(function(e, i){
-  eachPair.call(e, function(from, to){
-    railsUnderscores["underscore "+ from] = function(){
-      var result = inflector.underscore(from);
-      var eql = !!(to === result);
-      assert.ok(eql, from + " should underscore to:" + to+ ", instead it was:"+result);
-    };
-  });
-});
-
-
-myVows["titleize()"] = {};
-var railsTitleizations = myVows["titleize()"]["run through test cases"] = {
-  topc: "rails titleize cases"
-};
-
-eachPair.call(cases.MixtureToTitleCase, function(from, to){
-    railsTitleizations["titleize "+ from] = function(){
-      var result = inflector["titleize"](from);
-      var eql = !!(to === result);
-      assert.ok(eql, from + " should+ "+"titleize"+" to:" + to+ ", instead it was:"+result);
-    };
-  });
-
+]);
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 
