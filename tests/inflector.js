@@ -50,12 +50,12 @@ eachPair.call(cases.SingularToPlural, function(singular, plural){
 });
 
 myVows["singularize()"] = {};
-var railsPluralizations = myVows["singularize()"]["run through test cases"] = {
+var railsSingularizations = myVows["singularize()"]["run through test cases"] = {
   topc: "rails singularization cases"
 };
 
 eachPair.call(cases.SingularToPlural, function(singular, plural){
-  railsPluralizations["singularize "+ plural] = function(){
+  railsSingularizations["singularize "+ plural] = function(){
     var result = inflector.singularize(plural);
     var eql = !!(singular === result);
     assert.ok(eql, plural + " should singularize to:" + singular+ ", instead it was:"+result);
@@ -80,8 +80,21 @@ var railsUnderscores = myVows["underscore()"]["run through test cases"] = {
       assert.ok(eql, from + " should underscore to:" + to+ ", instead it was:"+result);
     };
   });
-})
+});
 
+
+myVows["titleize()"] = {};
+var railsTitleizations = myVows["titleize()"]["run through test cases"] = {
+  topc: "rails titleize cases"
+};
+
+eachPair.call(cases.MixtureToTitleCase, function(from, to){
+    railsTitleizations["titleize "+ from] = function(){
+      var result = inflector["titleize"](from);
+      var eql = !!(to === result);
+      assert.ok(eql, from + " should+ "+"titleize"+" to:" + to+ ", instead it was:"+result);
+    };
+  });
 
 
 vows.describe('format.js lib/inflector').addVows(myVows);
