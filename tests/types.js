@@ -8,6 +8,56 @@ var format = require('../index');
 
 
 vows.describe('format.js lib/types').addVows({
+  "isDefined()": {
+    "on nothing": {
+      topic: '',
+      "undefined is not defined":function( s ){
+        var result = format.types.isDefined(  );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is defined!');
+        }
+      }
+    },
+    "on a string literal ": {
+      topic: 'foo',
+      "strings are defined":function( s ){
+        var result = format.types.isDefined( s );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a string');
+        }
+      }
+    },
+    "on an array": {
+      topic: new Array(1,2,3),
+      "arrays are defined":function( s ){
+        var result = format.types.isDefined( s );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not defined');
+        }
+      }
+    },
+    "on an object": {
+      topic: {},
+      "objects are defined":function( s ){
+        var result = format.types.isDefined( s );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not defined');
+        }
+      }
+    }
+  },
   "isNumber()": {
     "on a number instance": {
       topic: new Number(1234),
@@ -121,6 +171,19 @@ vows.describe('format.js lib/types').addVows({
         }
       }
     }
-  }
-  
+  },
+  "isDate()": {
+    "on a date instance": {
+      topic: new Date(),
+      "this is a date":function( s ){
+        var result = format.types.isDate( s );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a date');
+        }
+      }
+    }
+  }  
 });
