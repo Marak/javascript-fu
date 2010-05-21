@@ -47,9 +47,10 @@ eachPair.call(cases.SingularToPlural, function(singular, plural){
   railsSingularizations["singularize "+ plural] = function(){
     var result = inflector.singularize(plural);
     var eql = !!(singular === result);
-    assert.ok(eql, plural + " should singularize to:" + singular+ ", instead it was:"+result);
+    assert.ok(eql, plural + " should singularize to: " + singular+ ", instead it was:"+result);
   };
 });
+
 
 //generic form!
 function testSuiteBuilder(kind, collections){
@@ -63,7 +64,7 @@ function testSuiteBuilder(kind, collections){
         myVows[kind+"()"]["run through test cases"][kind+" "+ from] = function(){
           var result = inflector[kind](from);
           var eql = !!(to === result);
-          assert.ok(eql, from + " should+ "+kind+" to:" + to+ ", instead it was:"+result);
+          assert.ok(eql, from + " should "+kind+"() to: " + to+ ", instead it was:"+result);
         };
     });    
   })
@@ -71,6 +72,8 @@ function testSuiteBuilder(kind, collections){
 
 testSuiteBuilder("pluralize", [cases.SingularToPlural]);
 testSuiteBuilder("titleize", [cases.MixtureToTitleCase]);
+testSuiteBuilder("camelize", [cases.UnderscoreToCamel]);
+
 testSuiteBuilder("underscore", [
   cases.CamelToUnderscore,
   cases.CamelToUnderscoreWithoutReverse,

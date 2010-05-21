@@ -109,11 +109,11 @@ exports.CamelToUnderscore = {
 	"Area51Controller": "area51_controller"
 };
 
-exports.UnderscoreToLowerCamel = {
-	"product": "product",
-	"special_guest": "specialGuest",
-	"application_controller": "applicationController",
-	"area51_controller": "area51Controller"
+exports.UnderscoreToCamel = {
+	"product": "Product",
+	"special_guest": "SpecialGuest",
+	"application_controller": "ApplicationController",
+	"area51_controller": "Area51Controller"
 };
 
 exports.CamelToUnderscoreWithoutReverse = {
@@ -240,3 +240,5 @@ exports.Irregularities = {
 	'sex': 'sexes',
 	'move': 'moves'
 };
+
+
