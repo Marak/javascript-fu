@@ -76,6 +76,7 @@ testSuiteBuilder("underscore", [
   cases.CamelToUnderscoreWithoutReverse,
   cases.CamelWithModuleToUnderscoreWithSlash
 ]);
+testSuiteBuilder("humanize", [cases.UnderscoreToHuman]);
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 
