@@ -8,4 +8,4 @@
 
 ## Authors
 
-####Marak Squires
+####Marak Squires, Aaron Blohowiak

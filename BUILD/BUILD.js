@@ -82,8 +82,8 @@ docsTree(format);
 code += 'if(typeof exports != "undefined"){for(var prop in format){exports[prop] = format[prop];}}';
 
 // generate some samples sets (move this code to another section)
-fs.writeFile('../format.js', code, function() {
-  sys.puts("format.js generated successfully!");
+fs.writeFile('../js-fu.js', code, function() {
+  sys.puts("js-fu.js generated successfully!");
 });
 
 var docOutput = M.Mustache.to_html(docs.main, {"API":docs.API});
