@@ -81,6 +81,7 @@ testSuiteBuilder("underscore", [
 ]);
 testSuiteBuilder("humanize", [cases.UnderscoreToHuman]);
 testSuiteBuilder("dasherize", [cases.UnderscoresToDashes]);
+testSuiteBuilder("ordinalize", [cases.OrdinalNumbers]);
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 
