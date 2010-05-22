@@ -70,7 +70,7 @@ function testSuiteBuilder(kind, collections){
   })
 }
 
-testSuiteBuilder("pluralize", [cases.SingularToPlural]);
+testSuiteBuilder("pluralize", [cases.SingularToPlural, cases.Irregularities]);
 testSuiteBuilder("titleize", [cases.MixtureToTitleCase]);
 testSuiteBuilder("camelize", [cases.UnderscoreToCamel]);
 
@@ -82,6 +82,7 @@ testSuiteBuilder("underscore", [
 testSuiteBuilder("humanize", [cases.UnderscoreToHuman]);
 testSuiteBuilder("dasherize", [cases.UnderscoresToDashes]);
 testSuiteBuilder("ordinalize", [cases.OrdinalNumbers]);
+testSuiteBuilder("parameterize", [cases.StringToParameterized])
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 
