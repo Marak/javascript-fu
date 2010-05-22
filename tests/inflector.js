@@ -6,22 +6,6 @@ var sys = require('sys');
 var format = require('../index');
 
 var inflector = format.inflector;
-/*
-camelize();
-classify();
-constantize();
-dasherize();
-demodulize();
-foreign_key();
-humanize();
-inflections();
-ordinalize();
-pluralize();
-singularize();
-tableize();
-titleize();
-underscore();
-*/
 
 //to make porting from rails easier
 
