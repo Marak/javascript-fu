@@ -2,9 +2,9 @@
 var sys = require('sys');
 
 exports.types = require('./lib/types');
-exports.inflector = require('./lib/inflector');
-exports.number = require('./lib/number');
 exports.string = require('./lib/string');
+exports.number = require('./lib/number');
+exports.inflector = require('./lib/inflector');
 exports.date = require('./lib/date');
 exports.currency = require('./lib/currency');
 
