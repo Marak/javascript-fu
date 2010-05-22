@@ -129,11 +129,6 @@ exports.CamelWithModuleToUnderscoreWithSlash = {
 	"UsersSection::CommissionDepartment": "users_section/commission_department"
 };
 
-exports.ClassNameToTableName = {
-	"PrimarySpokesman": "primary_spokesmen",
-	"NodeChild": "node_children"
-};
-
 exports.StringToParameterized = {
 	"Donald E. Knuth": "donald-e-knuth",
 	"Random text with *(bad)* characters": "random-text-with-bad-characters",
@@ -143,26 +138,6 @@ exports.StringToParameterized = {
 	"Squeeze   separators": "squeeze-separators",
 	"Test with + sign": "test-with-sign",
 	"Test with malformed utf8 \251": "test-with-malformed-utf8"
-};
-
-exports.StringToParameterizeWithNoSeparator = {
-	"Donald E. Knuth": "donaldeknuth",
-	"Random text with *(bad)* characters": "randomtextwithbadcharacters",
-	"Trailing bad characters!@#": "trailingbadcharacters",
-	"!@#Leading bad characters": "leadingbadcharacters",
-	"Squeeze   separators": "squeezeseparators",
-	"Test with + sign": "testwithsign",
-	"Test with malformed utf8 \251": "testwithmalformedutf8"
-};
-
-exports.StringToParameterizeWithUnderscore = {
-	"Donald E. Knuth": "donald_e_knuth",
-	"Random text with *(bad)* characters": "random_text_with_bad_characters",
-	"Trailing bad characters!@#": "trailing_bad_characters",
-	"!@#Leading bad characters": "leading_bad_characters",
-	"Squeeze   separators": "squeeze_separators",
-	"Test with + sign": "test_with_sign",
-	"Test with malformed utf8 \251": "test_with_malformed_utf8"
 };
 
 exports.StringToParameterizedAndNormalized = {
@@ -240,5 +215,3 @@ exports.Irregularities = {
 	'sex': 'sexes',
 	'move': 'moves'
 };
-
-

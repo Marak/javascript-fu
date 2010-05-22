@@ -6,22 +6,6 @@ var sys = require('sys');
 var format = require('../index');
 
 var inflector = format.inflector;
-/*
-camelize();
-classify();
-constantize();
-dasherize();
-demodulize();
-foreign_key();
-humanize();
-inflections();
-ordinalize();
-pluralize();
-singularize();
-tableize();
-titleize();
-underscore();
-*/
 
 //to make porting from rails easier
 
@@ -70,7 +54,7 @@ function testSuiteBuilder(kind, collections){
   })
 }
 
-testSuiteBuilder("pluralize", [cases.SingularToPlural]);
+testSuiteBuilder("pluralize", [cases.SingularToPlural, cases.Irregularities]);
 testSuiteBuilder("titleize", [cases.MixtureToTitleCase]);
 testSuiteBuilder("camelize", [cases.UnderscoreToCamel]);
 
@@ -81,6 +65,8 @@ testSuiteBuilder("underscore", [
 ]);
 testSuiteBuilder("humanize", [cases.UnderscoreToHuman]);
 testSuiteBuilder("dasherize", [cases.UnderscoresToDashes]);
+testSuiteBuilder("ordinalize", [cases.OrdinalNumbers]);
+testSuiteBuilder("parameterize", [cases.StringToParameterized])
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 
