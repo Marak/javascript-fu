@@ -10,7 +10,7 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 <ul><li>toBase</li><li>toCamel</li><li>toCanadian</li><li>toDash</li><li>toDate</li><li>toDays</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHours</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMinutes</li><li>toMonths</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toParams</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toSeconds</li><li>toSingle</li><li>toTime</li><li>toTitle</li><li>toUnderscore</li><li>toYears</li></ul>
 ### formatFu - format masking, the shadow art
 formatFu methods will take two arguments. a value, and a mask. the mask is liberally applied to the value and returned as a string
-<ul><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatTrim</li><li>formatWrap</li></ul>
+<ul><li>formatDate</li><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatTrim</li><li>formatWrap</li></ul>
 ### getFu - the art of the swift getter
 getFu methods take no arguments and return information based on what you asked for
 <ul><li>getData</li><li>getDate</li><li>getDay</li><li>getFullYear</li><li>getHours</li><li>getLeft</li><li>getMilliseconds</li><li>getMinutes</li><li>getMonth</li><li>getRight</li><li>getSeconds</li><li>getTime</li></ul>
