@@ -1,3 +1,4 @@
+# javascript-fu
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 
 ##the four disciplines of javascript-fu
