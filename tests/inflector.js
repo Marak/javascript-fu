@@ -21,17 +21,17 @@ var cases = require('./inflections');
 var myVows = {};
 
 
-//from and two are switched, as singularize's test data is the inverse of pluralize
-myVows["singularize()"] = {};
-var railsSingularizations = myVows["singularize()"]["run through test cases"] = {
+//from and two are switched, as toSingle's test data is the inverse of toPlural
+myVows["toSingle()"] = {};
+var railsSingularizations = myVows["toSingle()"]["run through test cases"] = {
   topc: "rails singularization cases"
 };
 
 eachPair.call(cases.SingularToPlural, function(singular, plural){
-  railsSingularizations["singularize "+ plural] = function(){
-    var result = inflector.singularize(plural);
+  railsSingularizations["toSingle "+ plural] = function(){
+    var result = inflector.toSingle(plural);
     var eql = !!(singular === result);
-    assert.ok(eql, plural + " should singularize to: " + singular+ ", instead it was:"+result);
+    assert.ok(eql, plural + " should toSingle to: " + singular+ ", instead it was:"+result);
   };
 });
 
@@ -54,19 +54,19 @@ function testSuiteBuilder(kind, collections){
   })
 }
 
-testSuiteBuilder("pluralize", [cases.SingularToPlural, cases.Irregularities]);
-testSuiteBuilder("titleize", [cases.MixtureToTitleCase]);
-testSuiteBuilder("camelize", [cases.UnderscoreToCamel]);
+testSuiteBuilder("toPlural", [cases.SingularToPlural, cases.Irregularities]);
+testSuiteBuilder("toTitle", [cases.MixtureToTitleCase]);
+testSuiteBuilder("toCamel", [cases.UnderscoreToCamel]);
 
-testSuiteBuilder("underscore", [
+testSuiteBuilder("toUnderscore", [
   cases.CamelToUnderscore,
   cases.CamelToUnderscoreWithoutReverse,
   cases.CamelWithModuleToUnderscoreWithSlash
 ]);
-testSuiteBuilder("humanize", [cases.UnderscoreToHuman]);
-testSuiteBuilder("dasherize", [cases.UnderscoresToDashes]);
-testSuiteBuilder("ordinalize", [cases.OrdinalNumbers]);
-testSuiteBuilder("parameterize", [cases.StringToParameterized])
+testSuiteBuilder("toHuman", [cases.UnderscoreToHuman]);
+testSuiteBuilder("toDash", [cases.UnderscoresToDashes]);
+testSuiteBuilder("toOrdinal", [cases.OrdinalNumbers]);
+testSuiteBuilder("toParam", [cases.StringToParameterized])
 
 vows.describe('format.js lib/inflector').addVows(myVows);
 

@@ -2,7 +2,7 @@
 #  monkey punch your variables with ninja-like precision &nbsp;&nbsp;&nbsp; ^_^
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 
-##the three disciplines of javascript-fu
+##the four disciplines of javascript-fu
 
 ### isFu - the art of type checking
 
@@ -16,6 +16,9 @@ toFu methods such as toDate(), toNumber(), toPlural(), toOrdinal(), toLink() wil
 
 getFu methods such as getDay(), getMonth(), getMinutes() mimic existing getters
 
+### formatFu - the art of format masking
+
+formatFu methods such as formatDate(), formatNumber(), formatText() will take two arguments. a value, and a mask. the mask is liberally applied to the value and returned as a string
 
 ## API
 
