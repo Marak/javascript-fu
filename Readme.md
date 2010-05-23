@@ -1,5 +1,3 @@
-#  learn javascript-fu today!
-#  monkey punch your variables with ninja-like precision &nbsp;&nbsp;&nbsp; ^_^
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 ##the four disciplines of javascript-fu
 ### isFu - the art of the curious type checker
