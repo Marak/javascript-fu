@@ -6,9 +6,8 @@ var sys = require('sys')
 
 var ChildProcess = require('child_process');
 
-
+/*
 // run tests
-
 child = exec('cd ../tests/ && make' , function (error, stdout, stderr) {
   sys.print('stdout: ' + stdout);
   if (error !== null) {
@@ -18,6 +17,7 @@ child = exec('cd ../tests/ && make' , function (error, stdout, stderr) {
   
   }
 });
+*/
 
 var code = '';
 var docs = {};
@@ -69,6 +69,8 @@ function moduleTree(level, context){
 
 code += ('\n');
 
+var fuMethods = [];
+
 function moduleTree( level, context ){
   for(var module in level){
     
@@ -78,6 +80,7 @@ function moduleTree( level, context ){
         moduleTree( level[module][method]);
       }
       else{
+       fuMethods.push(method);
        code += ( 'fu.' + method + ' = ');
        code += (level[module][method].toString() + ';\n');
       }
@@ -91,14 +94,21 @@ function moduleTree( level, context ){
 
 moduleTree(fu, 'fu');
 
+fuMethods = fuMethods.sort();
+sys.puts(JSON.stringify(fuMethods));
 
+
+
+// instead of building the library in a linear fashion, we are going to split up methods
+// based on their fu discipline
+// store the methods in a variable as we parse
 
 function docsTree(level){
 
   // generate nice tree of api for docs
   docs.API += '<ul>';
   for(var method in level){
-    docs.API += '<li>' + method;
+    docs.API += '<li>' + level[method];
       docs.API += '<ul>'
       if(typeof level[method] == 'object'){
         docsTree(level[method]);
@@ -110,12 +120,8 @@ function docsTree(level){
     docs.API += '</li>';
   }
   docs.API += '</ul>';
-
-
 }
-
-
-docsTree(fu);
+docsTree(fuMethods);
 
 
 
