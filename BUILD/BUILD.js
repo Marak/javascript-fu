@@ -133,16 +133,16 @@ for(var method in fuMethods){
   switch(fuMethods[method].substr(0,2))
   {
   case 'ge':
-    docs.getFu += ( '<li>' + fuMethods[method] + '</li>');
+    docs.getFu += ( '<li>fu.' + fuMethods[method] + '</li>');
   break;
   case 'is':
-    docs.isFu += ( '<li>' + fuMethods[method] + '</li>');
+    docs.isFu += ( '<li>fu.' + fuMethods[method] + '</li>');
   break;
   case 'fo':
-    docs.formatFu += ( '<li>' + fuMethods[method] + '</li>');
+    docs.formatFu += ( '<li>fu.' + fuMethods[method] + '</li>');
   break;
   case 'to':
-    docs.toFu += ( '<li>' + fuMethods[method] + '</li>');
+    docs.toFu += ( '<li>fu.' + fuMethods[method] + '</li>');
   break;
   default:
     //sys.puts('didnt find shit');
