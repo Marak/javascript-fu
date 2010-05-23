@@ -123,7 +123,10 @@ function docsTree(level){
 }
 docsTree(fuMethods);
 
-
+docs.isFu = '';
+docs.toFu = '';
+docs.formatFu = '';
+docs.getFu = '';
 
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
@@ -134,7 +137,14 @@ fs.writeFile('../js-fu.js', code, function() {
   sys.puts("js-fu.js generated successfully!");
 });
 
-var docOutput = M.Mustache.to_html(docs.main, {"API":docs.API});
+var docOutput = M.Mustache.to_html(docs.main, {
+  "API":docs.API
+ ,"isFu":docs.isFu
+ ,"toFu":docs.toFu
+ ,"getFu":docs.getFu
+ ,"formatFu":docs.formatFu
+ 
+});
 
 // generate some samples sets (move this code to another section)
 fs.writeFile('../Readme.md', docOutput, function() {
