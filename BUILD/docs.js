@@ -12,7 +12,7 @@ isFu methods such as isDefined() and isNumber() will accept <em>anything</em> as
 
 toFu methods such as toDate(), toNumber(), toPlural(), toOrdinal(), toLink() will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 
-### getFu - the art of getting
+### getFu - the art of the getter
 
 getFu methods such as getDay(), getMonth(), getMinutes() mimic existing getters
 
