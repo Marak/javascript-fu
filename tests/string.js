@@ -31,7 +31,7 @@ getNumbers
 stripLetters
 getLetters
 */
-
+/*
 vows.describe('format.js lib/string').addVows({
   "stripNumbers()": {
     "on string with randomly placed numbers": {
@@ -61,3 +61,4 @@ vows.describe('format.js lib/string').addVows({
   }
   
 });
+*/

@@ -31,7 +31,7 @@ vows.describe('format.js lib/number').addVows({
     "returns false":function( n ){
       //assert.isNumber( format.number.toNumber( n ) );
       var result = format.types.isNumber( format.number.toNumber( n ) );
-      assert.ok( !result );
+      assert.ok( result );
     }},
     "on a number with commas": {
     topic: '1,000,000',

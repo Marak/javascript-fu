@@ -1,9 +1,23 @@
 var sys = require('sys')
    , fs = require('fs')
-   , M = require('./Mustache');
-   
-   
+   , M = require('./Mustache')
+   , exec  = require('child_process').exec
+   , child;
 
+var ChildProcess = require('child_process');
+
+
+// run tests
+
+child = exec('cd ../tests/ && make' , function (error, stdout, stderr) {
+  sys.print('stdout: ' + stdout);
+  if (error !== null) {
+    sys.puts('exec error: ' + error);
+  }
+  else{
+  
+  }
+});
 
 var code = '';
 var docs = {};
