@@ -123,10 +123,37 @@ function docsTree(level){
 }
 docsTree(fuMethods);
 
-docs.isFu = '';
-docs.toFu = '';
-docs.formatFu = '';
-docs.getFu = '';
+docs.isFu = '<ul>';
+docs.toFu = '<ul>';
+docs.formatFu = '<ul>';
+docs.getFu = '<ul>';
+
+for(var method in fuMethods){
+  sys.puts(fuMethods[method].substr(0,2));
+  switch(fuMethods[method].substr(0,2))
+  {
+  case 'ge':
+    docs.getFu += ( '<li>' + fuMethods[method] + '</li>');
+  break;
+  case 'is':
+    docs.isFu += ( '<li>' + fuMethods[method] + '</li>');
+  break;
+  case 'fo':
+    docs.formatFu += ( '<li>' + fuMethods[method] + '</li>');
+  break;
+  case 'to':
+    docs.toFu += ( '<li>' + fuMethods[method] + '</li>');
+  break;
+  default:
+    //sys.puts('didnt find shit');
+  }
+}
+
+docs.isFu += ('</ul>');
+docs.toFu += ('</ul>');
+docs.formatFu += ('</ul>');
+docs.getFu += ('</ul>');
+
 
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out

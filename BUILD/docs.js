@@ -28,11 +28,6 @@ getFu methods such as getDay(), getMonth(), getMinutes() mimic existing getters
 
 {{{getFu}}}
 
-
-## API
-
-{{{API}}}
-
 ## Authors
 
 ####Marak Squires, Aaron Blohowiak
