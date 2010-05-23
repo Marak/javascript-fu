@@ -21,18 +21,23 @@ docs.main += fs.readFileSync('./docs.js', encoding='utf8');
 var lib = paths('./lib');
 
 
-var format= require('../index');
+var fu= require('../index');
 
-
+/*
 function moduleTree(level, context){
+  
+  if( typeof context == 'undefined'){
+    var context = 'fu';
+  }
+  
   // generate bundle for code on the browser
   for(var module in level){
-    code += ( '\n' + ''+context+'.' + module + ' = {};');
+    code += ( '\n' + module + ' = {};');
     for(var method in level[module]){
-      code += ( '\n' + ''+context+'.' + module);
+      code += ( '\n' + module);
       code += ( '.' + method + ' = ');
       if( typeof level[module][method] == 'object'){
-        moduleTree( level[module][method], method);
+        moduleTree( level[module][method]);
       }
       else{
         try{
@@ -46,8 +51,31 @@ function moduleTree(level, context){
     }
   }
 }
+*/
 
-moduleTree(format, 'format');
+code += ('\n');
+
+function moduleTree( level, context ){
+  for(var module in level){
+    
+    for(var method in level[module]){
+      
+      if( typeof level[module][method] == 'object'){
+        moduleTree( level[module][method]);
+      }
+      else{
+       code += ( 'fu.' + method + ' = ');
+       code += (level[module][method].toString() + ';\n');
+      }
+      
+    }
+    
+  }
+  
+}
+
+
+moduleTree(fu, 'fu');
 
 
 
@@ -58,7 +86,7 @@ function docsTree(level){
   for(var method in level){
     docs.API += '<li>' + method;
       docs.API += '<ul>'
-      if(typeof level[method] == 'object' && method != 'CultureInfo'){
+      if(typeof level[method] == 'object'){
         docsTree(level[method]);
       }
       else{
@@ -73,13 +101,13 @@ function docsTree(level){
 }
 
 
-docsTree(format);
+docsTree(fu);
 
 
 
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
-code += 'if(typeof exports != "undefined"){for(var prop in format){exports[prop] = format[prop];}}';
+code += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
 
 // generate some samples sets (move this code to another section)
 fs.writeFile('../js-fu.js', code, function() {

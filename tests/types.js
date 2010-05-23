@@ -85,13 +85,13 @@ vows.describe('format.js lib/types').addVows({
     },
     "on number literal": {
       topic: 1234,
-      "this is not a number":function( s ){
+      "this is a number":function( s ){
         var result = format.types.isNumber( s );
-        if( !result ){
+        if( result ){
           assert.ok( true );
         }
         else{
-          assert.ok( false, '"' + s + '"' + ' is not a number');
+          assert.ok( false, '"' + s + '"' + ' is a number');
         }
       }
     },
