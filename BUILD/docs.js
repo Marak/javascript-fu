@@ -1,6 +1,3 @@
-<style>
-h3{padding-top:0px;}
-</style>
 
 <table>
   <tr>
@@ -15,7 +12,12 @@ h3{padding-top:0px;}
       <h4><em>format masking, the shadow art</em></h3>   
       <br/>
       <br/>
-      <h3><em>dominate your values</em></h3>      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </td>
   </tr>
 </table>
