@@ -1,7 +1,13 @@
 <table>
   <tr>
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
-    <td valign = "top"><h1>javascript-fu</h1></td>
+    <td>
+      <h1>javascript-fu</h1>
+      <h2>isFu</h2>
+      <h2>toFu</h2>
+      <h2>formatFu</h2>
+    
+    </td>
   </tr>
 </table>
 
