@@ -1,7 +1,7 @@
 <table>
   <tr valign = "top">
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
-    <td>javascript-fu</td>
+    <td>## javascript-fu</td>
   </tr>
 </table>
 ##the three disciplines of javascript-fu
