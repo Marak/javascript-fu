@@ -1,4 +1,4 @@
-# javascript-fu
+# javascript-fu - inspect and manipulate your variables with ninja-like precision
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 ##the four disciplines of javascript-fu
 ### isFu - the art of the curious type checker
@@ -10,8 +10,5 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 ### formatFu - format masking, the shadow art
 formatFu methods will take two arguments. a value, and a mask. the mask is liberally applied to the value and returned as a string
 <ul><li>formatDate</li><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatTrim</li><li>formatWrap</li></ul>
-### getFu - the art of the swift getter
-getFu methods take no arguments and return information based on what you asked for
-<ul><li>getData</li><li>getDate</li><li>getDay</li><li>getFullYear</li><li>getHours</li><li>getLeft</li><li>getMilliseconds</li><li>getMinutes</li><li>getMonth</li><li>getRight</li><li>getSeconds</li><li>getTime</li></ul>
 ## Authors
 ####Marak Squires, Aaron Blohowiak

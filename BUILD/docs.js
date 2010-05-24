@@ -1,4 +1,4 @@
-# javascript-fu
+# javascript-fu - inspect and manipulate your variables with ninja-like precision
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 
 ##the four disciplines of javascript-fu
@@ -20,12 +20,6 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 formatFu methods will take two arguments. a value, and a mask. the mask is liberally applied to the value and returned as a string
 
 {{{formatFu}}}
-
-### getFu - the art of the swift getter
-
-getFu methods take no arguments and return information based on what you asked for
-
-{{{getFu}}}
 
 ## Authors
 
