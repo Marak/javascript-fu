@@ -1,4 +1,3 @@
-# javascript-fu - inspect and manipulate your variables with ninja-like precision
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
 
 ##the three disciplines of javascript-fu
@@ -17,7 +16,7 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 
 ### formatFu - format masking, the shadow art
 
-formatFu methods will take two arguments. a value, and a mask. the mask is liberally applied to the value and returned as a string
+formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 
 {{{formatFu}}}
 
