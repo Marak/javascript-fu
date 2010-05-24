@@ -1,6 +1,6 @@
 # javascript-fu - inspect and manipulate your variables with ninja-like precision
 <img src = "http://imgur.com/32UFx.jpg" border = "0">
-##the four disciplines of javascript-fu
+##the three disciplines of javascript-fu
 ### isFu - the art of the curious type checker
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 <ul><li>isArray</li><li>isDate</li><li>isDefined</li><li>isInflector</li><li>isJSON</li><li>isNumber</li><li>isObject</li><li>isString</li><li>isText</li><li>isTime</li></ul>
