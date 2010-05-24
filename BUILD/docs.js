@@ -1,3 +1,7 @@
+<style>
+h3{padding-top:0px;}
+</style>
+
 <table>
   <tr>
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
