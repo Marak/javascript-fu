@@ -6,7 +6,10 @@
       <h2>isFu</h2>
       <h2>toFu</h2>
       <h2>formatFu</h2>
-    
+      <br/>
+      <br/>
+      <br/>
+      <h3><em>dominate your values</em></h3>
     </td>
   </tr>
 </table>
