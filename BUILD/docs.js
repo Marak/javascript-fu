@@ -4,11 +4,11 @@
     <td>
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
-      <h3><em>the art of the curious type checker</em></h3>   
+      <h5><em>the art of the curious type checker</em></h3>   
       <h2>toFu</h2>
-      <h3><em>the deadly art of the monkey punch</em></h3>   
+      <h5><em>the deadly art of the monkey punch</em></h3>   
       <h2>formatFu</h2>
-      <h3><em>format masking, the shadow art</em></h3>   
+      <h5><em>format masking, the shadow art</em></h3>   
       <br/>
       <br/>
       <h3><em>dominate your values</em></h3>      
