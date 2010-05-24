@@ -1,4 +1,9 @@
-<img src = "http://imgur.com/32UFx.jpg" border = "0">
+<table>
+  <tr valign = "top">
+    <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
+    <td>javascript-fu</td>
+  </tr>
+</table>
 ##the three disciplines of javascript-fu
 ### isFu - the art of the curious type checker
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
