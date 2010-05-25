@@ -24,9 +24,6 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 ### toFu - the deadly art of the monkey punch
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toJSON</li><li>toLink</li><li>toParams</li><li>toNumber</li><li>toPercent</li><li>toCamel</li><li>toDash</li><li>toHuman</li><li>toOrdinal</li><li>toParam</li><li>toPlural</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toDate</li><li>toCanadian</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toNickels</li><li>toPennies</li><li>toQuarters</li></ul>
-### formatFu - format masking, the shadow art
-formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
-<ul><li>formatTrim</li><li>formatWrap</li><li>formatArray</li><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatDate</li></ul>
 ### dateTimeFu - the art of space and time
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
@@ -234,5 +231,7 @@ formatFu methods can take two arguments. a value, and an optional mask. the mask
 		</tr>
 	</tbody>
 </table>
+### numberFu - format masking, the shadow art
+formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 ## Authors
 ####Marak Squires, Aaron Blohowiak

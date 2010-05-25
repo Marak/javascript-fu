@@ -33,15 +33,15 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 
 {{{toFu}}}
 
-### formatFu - format masking, the shadow art
-
-formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
-
-{{{formatFu}}}
-
 ### dateTimeFu - the art of space and time
 
 {{{dateTimeFu}}}
+
+### numberFu - format masking, the shadow art
+
+formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
+
+{{{numberFu}}}
 
 
 ## Authors
