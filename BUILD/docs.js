@@ -8,7 +8,7 @@
       <h4><em>the art of the curious type checker</em></h3>   
       <h2>toFu</h2>
       <h4><em>the deadly art of the monkey punch</em></h3>   
-      <h2>formatFu</h2>
+      <h2>numberFu</h2>
       <h4><em>format masking, the shadow art</em></h3>   
       <h2>dateTimeFu</h2>
       <h4><em>the art of time and space</em></h3>   
@@ -33,15 +33,17 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 
 {{{toFu}}}
 
+### numberFu - format masking, the shadow art
+
+numberFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
+
+{{{numberFu}}}
+
+
 ### dateTimeFu - the art of space and time
 
 {{{dateTimeFu}}}
 
-### numberFu - format masking, the shadow art
-
-formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
-
-{{{numberFu}}}
 
 
 ## Authors
