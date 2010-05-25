@@ -2,7 +2,7 @@
 <table>
   <tr>
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
-    <td>
+    <td align = "right">
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
       <h4><em>the art of the curious type checker</em></h3>   
