@@ -24,6 +24,7 @@ var docs = {};
 
 docs.main = '';
 docs.API = '';
+docs.dateTimeFu = '';
 
 // read in the the main.js file as our main boilerplate code 
 code += fs.readFileSync('./main.js', encoding='utf8');

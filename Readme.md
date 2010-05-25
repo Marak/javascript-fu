@@ -28,6 +28,6 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 <ul><li>formatTrim</li><li>formatWrap</li><li>formatArray</li><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatDate</li></ul>
 ### dateTimeFu - the art of space and time
-undefinedarrrrrrg
+arrrrrrg
 ## Authors
 ####Marak Squires, Aaron Blohowiak
