@@ -6,7 +6,6 @@ var sys = require('sys');
 
 var format = require('../index');
 
-
 vows.describe('format.js lib/types').addVows({
   "isDefined()": {
     "on nothing": {
@@ -25,7 +24,7 @@ vows.describe('format.js lib/types').addVows({
       topic: 'foo',
       "strings are defined":function( s ){
         var result = format.types.isDefined( s );
-        if( !result ){
+        if( result ){
           assert.ok( true );
         }
         else{
@@ -37,7 +36,7 @@ vows.describe('format.js lib/types').addVows({
       topic: new Array(1,2,3),
       "arrays are defined":function( s ){
         var result = format.types.isDefined( s );
-        if( !result ){
+        if( result ){
           assert.ok( true );
         }
         else{
@@ -49,7 +48,7 @@ vows.describe('format.js lib/types').addVows({
       topic: {},
       "objects are defined":function( s ){
         var result = format.types.isDefined( s );
-        if( !result ){
+        if( result ){
           assert.ok( true );
         }
         else{
@@ -273,5 +272,105 @@ vows.describe('format.js lib/types').addVows({
         }
       }
     }
-  }  
+  },
+	"isObject()": {
+      "on an object": {
+	      topic: {},
+	      "this is an object":function( o ){
+	        var result = format.types.isObject( o );
+	        if( result ){
+	          assert.ok( true );
+	        }
+	        else{
+	          assert.ok( false, '"' + o + '"' + ' is not an object');
+	        }
+	      }
+	    },
+    "on a string literal ": {
+      topic: 'foo',
+      "this is not an object":function( o ){
+        var result = format.types.isObject( o );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + o + '"' + ' is not an object');
+        }
+      }
+    },
+    "on an Array": {
+      topic: new Array([1,2,3]),
+      "this is not an object":function( o ){
+        var result = format.types.isObject( o );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + o + '"' + ' is not an object');
+        }
+      }
+    },
+		"on an function": {
+      topic: function(){},
+      "this is not an object":function( o ){
+        var result = format.types.isObject( o );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + o + '"' + ' is not an object');
+        }
+      }
+    }
+  },
+	"isFunction()": {
+		"on an function": {
+      topic: function () {  return function (){};  },
+      "this is a function":function( f ){
+        var result = format.types.isFunction( f );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + f + '"' + ' is a function');
+        }
+      }
+    },
+      "on an object": {
+	      topic: {},
+	      "this is a function":function( f ){
+	        var result = format.types.isFunction( f );
+	        if( !result ){
+	          assert.ok( true );
+	        }
+	        else{
+	          assert.ok( false, '"' + o + '"' + ' is not a function');
+	        }
+	      }
+	    },
+    "on a string literal ": {
+      topic: 'foo',
+      "this is a function":function( f ){
+        var result = format.types.isFunction( f );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + o + '"' + ' is not a function');
+        }
+      }
+    },
+    "on an Array": {
+      topic: new Array([1,2,3]),
+      "this is a function":function( f ){
+        var result = format.types.isFunction( f );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + o + '"' + ' is not a function');
+        }
+      }
+    }
+  }
 });
