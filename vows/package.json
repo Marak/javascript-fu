@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name"          : "vows",
   "description"   : "Asynchronous BDD & continuous integration for node.js",
   "url"           : "http://cloudhead.io/vows",
@@ -9,4 +10,18 @@
   "directories"   : {"lib": "./lib"},
   "main"          : "./lib/vows",
   "version"       : "0.2.4"
+=======
+  "name"          : "eyes",
+  "description"   : "a customizable value inspector",
+  "url"           : "http://github.com/cloudhead/eyes.js",
+  "keywords"      : ["inspector", "debug", "inspect", "print"],
+  "author"        : "Alexis Sellier <self@cloudhead.net>",
+  "contributors"  : [],
+  "licenses"      : ["MIT"],
+  "dependencies"  : [],
+  "main"          : "./lib/eyes",
+  "version"       : "0.1.1",
+  "directories"   : { "lib": "./lib", "test": "./test" },
+  "engines"       : { "node": "> 0.1.90" }
+>>>>>>> d37d9548137044f07dd5acab76dbffad0ab67dee
 }

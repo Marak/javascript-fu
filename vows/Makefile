@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # Run all tests
 #
@@ -11,3 +12,9 @@ install:
 	@@echo "vows: done."
 
 .PHONY: test install
+=======
+test:
+	@@node test/eyes-test.js
+
+.PHONY: test
+>>>>>>> d37d9548137044f07dd5acab76dbffad0ab67dee
