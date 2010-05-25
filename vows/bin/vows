@@ -1,0 +1,204 @@
+#!/usr/bin/env node
+
+var path   = require('path'),
+    sys    = require('sys'),
+    fs     = require('fs'),
+    events = require('events'),
+    spawn  = require('child_process').spawn;
+
+require.paths.unshift(path.join(__dirname, '..', 'lib'));
+
+var console = require('vows/reporters/console');
+
+var options = [];
+
+var argv = process.argv.slice(1).filter(function (a) {
+    if (a !== __filename) {
+        if (a[0] === '-') { options.push(a) }
+        return true;
+    }
+});
+
+if (argv.length > 0) {
+    argv.forEach(function (arg) {
+        runTest(arg, function (result) {
+            console.report(result);
+        });
+    });
+} else {
+    //
+    // Watch mode
+    //
+    (function () {
+        var clock = [
+            '.   ', '..  ', '... ', ' ...',
+            '  ..', '   .', '   .', '  ..',
+            '... ', '..  ', '.   '
+        ], wheel = [
+            '-', '\\', '|', '/'
+        ];
+        var current = 0,
+            runningTests = 0,
+            currentFile,
+            gracePeriod = 0,
+            status,
+            lastRun,
+            testFolder,
+            colors = ['32m', '33m', '31m'],
+            timer = setInterval(tick, 100),
+            root = fs.readdirSync('.');
+
+        if (root.indexOf('test') !== -1) {
+            testFolder = 'test';
+        } else if (root.indexOf('spec') !== -1) {
+            testFolder = 'spec';
+        } else {
+            throw new(Error)("Couldn't find test folder");
+        }
+
+        cursorHide();
+
+        // Run every 100ms
+        function tick() {
+            cursorSave();
+            eraseLine();
+            lastRun && esc(colors[status.errored ? 2 : (status.broken ? 1 : 0)]);
+
+            if (runningTests > 0 || gracePeriod) {
+                gracePeriod--;
+                print(wheel[current]);
+                esc('39m');
+                print('    detected change in ' + currentFile + '...');
+                if (current == wheel.length - 1) { current = -1 }
+            } else {
+                print(clock[current]);
+                print(' ');
+                status && print(console.report(['finish', status], null));
+                if (lastRun) {
+                  esc('90m');
+                  print( ' (' + lastRun.valueOf() + ')');
+                }
+                if (current == clock.length - 1) { current = -1 }
+            }
+
+            current++;
+            esc('39m');
+            cursorRestore();
+        }
+
+        //
+        // Utility functions
+        //
+        function print(str)      { process.stdout.write(str) }
+        function esc(str)        { print("\033[" + str) }
+        function eraseLine()     { esc("2K") }
+        function cursorSave()    { esc("s") }
+        function cursorRestore() { esc("u") }
+        function cursorHide()    { esc("?25l") }
+        function cursorShow()    { esc("?25h") }
+        function cleanup()       { cursorShow(), print('\n') }
+
+        //
+        // Called when a file has been modified.
+        // Run the matching tests and change the status.
+        //
+        function changed(file) {
+            status = { honored: 0, broken: 0, errored: 0 };
+            gracePeriod = 10;
+            current = 0;
+
+            currentFile = file + '.js';
+
+            file = /-(test|spec)$/.test(file) ? path.join(testFolder, file + '.js')
+                                              : path.join(testFolder, file + '-' + testFolder + '.js');
+
+            paths(testFolder).forEach(function (p) {
+                runningTests ++;
+                runTest(p).addListener('finish', function (obj) {
+                    runningTests --;
+                    delete obj.time;
+                    status.honored += obj.honored;
+                    status.broken  += obj.broken;
+                    status.errored += obj.errored;
+                    lastRun = new(Date);
+                });
+            });
+        }
+        //
+        // Recursively traverse a hierarchy, returning
+        // a list of all relevant .js files.
+        //
+        function paths(dir) {
+            var paths = [];
+
+            try { fs.statSync(dir) }
+            catch (e) { return [] }
+
+            (function traverse(dir, stack) {
+                stack.push(dir);
+                fs.readdirSync(stack.join('/')).forEach(function (file) {
+                    var path = stack.concat([file]).join('/'),
+                        stat = fs.statSync(path);
+
+                    if (file[0] == '.' || file === 'vendor') {
+                        return;
+                    } else if (stat.isFile() && /\.js$/.test(file)) {
+                        paths.push(path);
+                    } else if (stat.isDirectory()) {
+                        traverse(file, stack);
+                    }
+                });
+                stack.pop();
+            })(dir || '.', []);
+
+            return paths;
+        }
+
+        //
+        // Watch all relevant files in lib/ and src/,
+        // and call `changed()` on change.
+        //
+        [].concat(paths('lib'), paths('src'), paths(testFolder)).forEach(function (p) {
+            fs.watchFile(p, function (current, previous) {
+                if (new(Date)(current.mtime).valueOf() ===
+                    new(Date)(previous.mtime).valueOf()) { return }
+                else {
+                    changed(path.basename(p, '.js'));
+                }
+            });
+        });
+
+        process.addListener('exit', cleanup);
+        process.addListener('SIGINT', function () {
+            cleanup();
+            process.exit();
+        });
+        process.addListener('SIGQUIT', function () {
+            changed();
+        });
+    })();
+}
+
+function runTest(file, callback) {
+    var test = spawn('node', options.concat([file, '--json'])), obj;
+    var promise = new(events.EventEmitter);
+
+    test.stdout.addListener('data', function (data) {
+        data.toString('utf8').trim().split('\n').forEach(function (chunk) {
+            try {
+                obj = JSON.parse(chunk);
+                promise.emit(obj[0], obj[1]);
+                if (callback) { callback(obj) }
+            } catch (e) {
+                sys.puts(e, chunk);
+            }
+        });
+    });
+
+    test.stderr.addListener('data', function (data) {
+        sys.debug(data.stack);
+    });
+    test.addListener('exit', function (code) {});
+    return promise;
+}
+
