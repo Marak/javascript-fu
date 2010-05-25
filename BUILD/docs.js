@@ -2,7 +2,7 @@
 <table>
   <tr>
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
-    <td align = "right">
+    <td>
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
       <h4><em>the art of the curious type checker</em></h3>   
@@ -40,6 +40,9 @@ formatFu methods can take two arguments. a value, and an optional mask. the mask
 {{{formatFu}}}
 
 ### getFu - the art of the swift getter
+
+{{{getFu}}}
+
 
 ## Authors
 

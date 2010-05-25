@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td><img src = "http://imgur.com/32UFx.jpg" border = "0"></td>
-    <td align = "right">
+    <td>
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
       <h4><em>the art of the curious type checker</em></h3>   
@@ -28,5 +28,6 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 <ul><li>formatDate</li><li>formatNumber</li><li>formatRandom</li><li>formatReverse</li><li>formatShuffle</li><li>formatTrim</li><li>formatWrap</li></ul>
 ### getFu - the art of the swift getter
+<ul><li>getData</li><li>getDate</li><li>getDay</li><li>getFullYear</li><li>getHours</li><li>getLeft</li><li>getLinks</li><li>getMilliseconds</li><li>getMinutes</li><li>getMonth</li><li>getRight</li><li>getSeconds</li><li>getTime</li></ul>
 ## Authors
 ####Marak Squires, Aaron Blohowiak
