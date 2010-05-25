@@ -165,6 +165,12 @@ fs.writeFile('../js-fu.js', code, function() {
   sys.puts("js-fu.js generated successfully!");
 });
 
+// generate library for demos
+fs.writeFile('../examples/js/js-fu.js', code, function() {
+  sys.puts("../examples/js/js-fu.js generated successfully!");
+});
+
+
 var docOutput = M.Mustache.to_html(docs.main, {
   "API":docs.API
  ,"isFu":docs.isFu
