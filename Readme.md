@@ -15,14 +15,14 @@
     </td>
   </tr>
 </table>
-##the three disciplines of javascript-fu
-### isFu - the art of the curious type checker
+<h2>the three disciplines of javascript-fu</h2>
+<h3>isFu - the art of the curious type checker</h3>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 <ul><li>isArray</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isFunction</li><li>isJSON</li><li>isNumber</li><li>isObject</li><li>isString</li><li>isText</li><li>isTime</li></ul>
-### toFu - the deadly art of the monkey punch
+<h3>toFu - the deadly art of the monkey punch</h3>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul>types<ul>10</ul>string<ul><li>toJSON</li><li>toLink</li><li>toParams</li>7</ul>number<ul><li>toNumber</li><li>toPercent</li>1</ul>format<ul>5</ul>inflector<ul><li>toCamel</li><li>toDash</li><li>toHuman</li><li>toOrdinal</li><li>toParam</li><li>toPlural</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li>8</ul>date<ul><li>toDate</li>4</ul>currency<ul><li>toCanadian</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toNickels</li><li>toPennies</li><li>toQuarters</li>6</ul>data<ul>0</ul></ul>
-### dateTimeFu - the art of space and time
+<h3>dateTimeFu - the art of space and time</h3>
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
 		<tr>
@@ -229,5 +229,5 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 		</tr>
 	</tbody>
 </table>
-## Authors
-####Marak Squires, Aaron Blohowiak
+<h2>Authors</h2>
+<h4>Marak Squires, Aaron Blohowiak</h4>

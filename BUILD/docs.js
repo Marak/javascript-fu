@@ -17,27 +17,27 @@
   </tr>
 </table>
 
-##the three disciplines of javascript-fu
+<h2>the three disciplines of javascript-fu</h2>
 
-### isFu - the art of the curious type checker
+<h3>isFu - the art of the curious type checker</h3>
 
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 
 {{{isFu}}}
 
-### toFu - the deadly art of the monkey punch
+<h3>toFu - the deadly art of the monkey punch</h3>
 
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 
 {{{toFu}}}
 
 
-### dateTimeFu - the art of space and time
+<h3>dateTimeFu - the art of space and time</h3>
 
 {{{dateTimeFu}}}
 
 
 
-## Authors
+<h2>Authors</h2>
 
-####Marak Squires, Aaron Blohowiak
+<h4>Marak Squires, Aaron Blohowiak</h4>
