@@ -39,9 +39,9 @@ formatFu methods can take two arguments. a value, and an optional mask. the mask
 
 {{{formatFu}}}
 
-### getFu - the art of the swift getter
+### dateTimeFu - the art of space and time
 
-{{{getFu}}}
+{{{dateTimeFu}}}
 
 
 ## Authors

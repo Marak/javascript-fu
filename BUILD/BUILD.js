@@ -30,6 +30,7 @@ code += fs.readFileSync('./main.js', encoding='utf8');
 code = M.Mustache.to_html(code, {"today":new Date().getTime()});
 
 docs.main += fs.readFileSync('./docs.js', encoding='utf8');
+docs.dateTimeFu += fs.readFileSync('./dateTime.js', encoding='utf8');
 
 // parse entire lib directory and concat it into one file for the browser
 var lib = paths('./lib');
@@ -166,6 +167,7 @@ var docOutput = M.Mustache.to_html(docs.main, {
  ,"toFu":docs.toFu
  ,"getFu":docs.getFu
  ,"formatFu":docs.formatFu
+ ,"dateTimeFu":docs.dateTimeFu
  
 });
 
