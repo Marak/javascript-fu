@@ -21,7 +21,7 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 <ul><li>isArray</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isFunction</li><li>isJSON</li><li>isNumber</li><li>isObject</li><li>isString</li><li>isText</li><li>isTime</li></ul>
 <h3>toFu - the deadly art of the monkey punch</h3>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
-<ul>types<ul>10</ul>string<ul><li>toJSON</li><li>toLink</li><li>toParams</li>7</ul>number<ul><li>toNumber</li><li>toPercent</li>1</ul>format<ul>5</ul>inflector<ul><li>toCamel</li><li>toDash</li><li>toHuman</li><li>toOrdinal</li><li>toParam</li><li>toPlural</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li>8</ul>date<ul><li>toDate</li>4</ul>currency<ul><li>toCanadian</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toNickels</li><li>toPennies</li><li>toQuarters</li>6</ul>data<ul>0</ul></ul>
+<ul><li>toJSON</li><li>toLink</li><li>toParams</li><li>toNumber</li><li>toPercent</li><li>toCamel</li><li>toDash</li><li>toHuman</li><li>toOrdinal</li><li>toParam</li><li>toPlural</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toDate</li><li>toCanadian</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toNickels</li><li>toPennies</li><li>toQuarters</li></ul>
 <h3>dateTimeFu - the art of space and time</h3>
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
