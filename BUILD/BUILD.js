@@ -159,7 +159,7 @@ docs.getFu += ('</ul>');
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
 code += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
-
+code += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
 // generate some samples sets (move this code to another section)
 fs.writeFile('../js-fu.js', code, function() {
   sys.puts("js-fu.js generated successfully!");

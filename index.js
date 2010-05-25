@@ -10,6 +10,11 @@ exports.date = require('./lib/date');
 exports.currency = require('./lib/currency');
 exports.data = require('./lib/data');
 
+// For convenience...
+Date.prototype.format = function (mask, utc) {
+	return dateFormat(this, mask, utc);
+};
+
 //sys.puts(this.date.getMonthNumberFromName('march'));
 
 sys.puts(JSON.stringify(exports));
