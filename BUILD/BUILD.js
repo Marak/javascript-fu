@@ -124,7 +124,7 @@ docs.getFu = '<ul>';
 for(var module in fuMethods){
   var fM = fuMethods[module];
   for(var method in fM){
-    sys.puts(fM[method].substr(0,2));
+    //sys.puts(fM[method].substr(0,2));
     switch(fM[method].substr(0,2))
     {
     case 'ge':

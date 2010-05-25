@@ -10,8 +10,8 @@
       <h4><em>the deadly art of the monkey punch</em></h3>   
       <h2>formatFu</h2>
       <h4><em>format masking, the shadow art</em></h3>   
-      <h2>getFu</h2>
-      <h4><em>the art of the swift getter</em></h3>   
+      <h2>dateTimeFu</h2>
+      <h4><em>the art of time and space</em></h3>   
       <br/>
       <br/>
       <br/>
