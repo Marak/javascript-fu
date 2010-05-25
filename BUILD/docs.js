@@ -10,7 +10,8 @@
       <h4><em>the deadly art of the monkey punch</em></h3>   
       <h2>formatFu</h2>
       <h4><em>format masking, the shadow art</em></h3>   
-      <br/>
+      <h2>getFu</h2>
+      <h4><em>the art of the swift getter</em></h3>   
       <br/>
       <br/>
       <br/>
@@ -37,6 +38,8 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 
 {{{formatFu}}}
+
+### getFu - the art of the swift getter
 
 ## Authors
 
