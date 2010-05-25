@@ -69,35 +69,28 @@ function moduleTree(level, context){
 
 code += ('\n');
 
-var fuMethods = [];
+var fuMethods = {};
 
 function moduleTree( level, context ){
   for(var module in level){
-    
+    fuMethods[module] = [];
     for(var method in level[module]){
-      
       if( typeof level[module][method] == 'object'){
         moduleTree( level[module][method]);
       }
       else{
-       fuMethods.push(method);
+       fuMethods[module].push(method);
        code += ( 'fu.' + method + ' = ');
        code += (level[module][method].toString() + ';\n');
       }
-      
     }
-    
+    fuMethods[module] = fuMethods[module].sort();
   }
-  
 }
-
 
 moduleTree(fu, 'fu');
 
-fuMethods = fuMethods.sort();
 sys.puts(JSON.stringify(fuMethods));
-
-
 
 // instead of building the library in a linear fashion, we are going to split up methods
 // based on their fu discipline
@@ -128,24 +121,27 @@ docs.toFu = '<ul>';
 docs.formatFu = '<ul>';
 docs.getFu = '<ul>';
 
-for(var method in fuMethods){
-  sys.puts(fuMethods[method].substr(0,2));
-  switch(fuMethods[method].substr(0,2))
-  {
-  case 'ge':
-    docs.getFu += ( '<li>' + fuMethods[method] + '</li>');
-  break;
-  case 'is':
-    docs.isFu += ( '<li>' + fuMethods[method] + '</li>');
-  break;
-  case 'fo':
-    docs.formatFu += ( '<li>' + fuMethods[method] + '</li>');
-  break;
-  case 'to':
-    docs.toFu += ( '<li>' + fuMethods[method] + '</li>');
-  break;
-  default:
-    //sys.puts('didnt find shit');
+for(var module in fuMethods){
+  var fM = fuMethods[module];
+  for(var method in fM){
+    sys.puts(fM[method].substr(0,2));
+    switch(fM[method].substr(0,2))
+    {
+    case 'ge':
+      docs.getFu += ( '<li>' + fM[method] + '</li>');
+    break;
+    case 'is':
+      docs.isFu += ( '<li>' + fM[method] + '</li>');
+    break;
+    case 'fo':
+      docs.formatFu += ( '<li>' + fM[method] + '</li>');
+    break;
+    case 'to':
+      docs.toFu += ( '<li>' + fM[method] + '</li>');
+    break;
+    default:
+      //sys.puts('didnt find shit');
+    }
   }
 }
 
