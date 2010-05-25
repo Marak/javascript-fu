@@ -7,8 +7,6 @@
       <h4><em>the art of the curious type checker</em></h3>   
       <h2>toFu</h2>
       <h4><em>the deadly art of the monkey punch</em></h3>   
-      <h2>numberFu</h2>
-      <h4><em>format masking, the shadow art</em></h3>   
       <h2>dateTimeFu</h2>
       <h4><em>the art of time and space</em></h3>   
       <br/>
@@ -24,8 +22,6 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 ### toFu - the deadly art of the monkey punch
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toJSON</li><li>toLink</li><li>toParams</li><li>toNumber</li><li>toPercent</li><li>toCamel</li><li>toDash</li><li>toHuman</li><li>toOrdinal</li><li>toParam</li><li>toPlural</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toDate</li><li>toCanadian</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toNickels</li><li>toPennies</li><li>toQuarters</li></ul>
-### numberFu - format masking, the shadow art
-numberFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
 ### dateTimeFu - the art of space and time
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
