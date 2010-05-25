@@ -325,7 +325,7 @@ vows.describe('format.js lib/types').addVows({
   },
 	"isFunction()": {
 		"on an function": {
-      topic: function () {  return function (){};  },
+      topic: Function,
       "this is a function":function( f ){
         var result = format.types.isFunction( f );
         if( result ){
