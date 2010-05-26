@@ -1,0 +1,53 @@
+<html>
+  <head>
+     <title>javascript-fu - a javascript martial arts library for node.js and the browser. destroy the bad parts with ninja-like precision</title>
+     <script src = "js/jquery.js" type = "text/javascript"></script>
+     <script src = "js/prettyPrint.js" type = "text/javascript"></script>
+     <script src = "js/js-fu.js" type = "text/javascript"></script>
+
+      <script>
+
+          if(typeof JSON == 'undefined'){
+            document.write('get a real browser that has JSON.stringify and JSON.parse built in <br/>');
+
+            // implement JSON.stringify serialization
+            var JSON = {};
+            JSON.stringify = function (obj) {
+            	var t = typeof (obj);
+            	if (t != "object" || obj === null) {
+            		// simple data type
+            		if (t == "string") obj = '"'+obj+'"';
+            		return String(obj);
+            	}
+            	else {
+            		// recurse array or object
+            		var n, v, json = [], arr = (obj && obj.constructor == Array);
+            		for (n in obj) {
+            			v = obj[n]; t = typeof(v);
+            			if (t == "string") v = '"'+v+'"';
+            			else if (t == "object" && v !== null) v = JSON.stringify(v);
+            			json.push((arr ? "" : '"' + n + '":') + String(v));
+            		}
+            		return (arr ? "[" : "{") + String(json) + (arr ? "]" : "}");
+            	}
+            };
+          }
+
+          $(document).ready(function(e){
+            
+     
+              
+          });
+
+      </script>
+  </head>
+  <body>
+    <h1>javascript-fu - a javascript martial arts library for node.js and the browser. destroy the bad parts with ninja-like precision</h1>
+    <div id = "output"></div>
+  </body>
+</html>
+
+
+
+
+
