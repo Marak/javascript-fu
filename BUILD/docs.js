@@ -8,10 +8,8 @@
       <h4><em>the art of the curious type checker</em></h3>   
       <h2>toFu</h2>
       <h4><em>the deadly art of the monkey punch</em></h3>   
-      <h2>formatFu</h2>
-      <h4><em>format masking, the shadow art</em></h3>   
-      <h2>getFu</h2>
-      <h4><em>the art of the swift getter</em></h3>   
+      <h2>dateTimeFu</h2>
+      <h4><em>the art of time and space</em></h3>   
       <br/>
       <br/>
       <br/>
@@ -19,31 +17,27 @@
   </tr>
 </table>
 
-##the three disciplines of javascript-fu
+<h2>the three disciplines of javascript-fu</h2>
 
-### isFu - the art of the curious type checker
+<h3>isFu - the art of the curious type checker</h3>
 
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 
 {{{isFu}}}
 
-### toFu - the deadly art of the monkey punch
+<h3>toFu - the deadly art of the monkey punch</h3>
 
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 
 {{{toFu}}}
 
-### formatFu - format masking, the shadow art
 
-formatFu methods can take two arguments. a value, and an optional mask. the mask is liberally applied to the value and the result is returned as a string
+<h3>dateTimeFu - the art of space and time</h3>
 
-{{{formatFu}}}
-
-### getFu - the art of the swift getter
-
-{{{getFu}}}
+{{{dateTimeFu}}}
 
 
-## Authors
 
-####Marak Squires, Aaron Blohowiak
+<h2>Authors</h2>
+
+<h4>Marak Squires, Aaron Blohowiak</h4>

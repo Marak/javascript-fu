@@ -24,12 +24,14 @@ var docs = {};
 
 docs.main = '';
 docs.API = '';
+docs.dateTimeFu = '';
 
 // read in the the main.js file as our main boilerplate code 
 code += fs.readFileSync('./main.js', encoding='utf8');
 code = M.Mustache.to_html(code, {"today":new Date().getTime()});
 
 docs.main += fs.readFileSync('./docs.js', encoding='utf8');
+docs.dateTimeFu += fs.readFileSync('./dateTime.js', encoding='utf8');
 
 // parse entire lib directory and concat it into one file for the browser
 var lib = paths('./lib');
@@ -121,10 +123,12 @@ docs.toFu = '<ul>';
 docs.formatFu = '<ul>';
 docs.getFu = '<ul>';
 
+
 for(var module in fuMethods){
   var fM = fuMethods[module];
+  //docs.toFu += ( module + '<ul>');
   for(var method in fM){
-    sys.puts(fM[method].substr(0,2));
+    //sys.puts(fM[method].substr(0,2));
     switch(fM[method].substr(0,2))
     {
     case 'ge':
@@ -143,6 +147,7 @@ for(var module in fuMethods){
       //sys.puts('didnt find shit');
     }
   }
+  //docs.toFu += ( method + '</ul>');
 }
 
 docs.isFu += ('</ul>');
@@ -154,11 +159,17 @@ docs.getFu += ('</ul>');
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
 code += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
-
+code += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
 // generate some samples sets (move this code to another section)
 fs.writeFile('../js-fu.js', code, function() {
   sys.puts("js-fu.js generated successfully!");
 });
+
+// generate library for demos
+fs.writeFile('../examples/js/js-fu.js', code, function() {
+  sys.puts("../examples/js/js-fu.js generated successfully!");
+});
+
 
 var docOutput = M.Mustache.to_html(docs.main, {
   "API":docs.API
@@ -166,6 +177,7 @@ var docOutput = M.Mustache.to_html(docs.main, {
  ,"toFu":docs.toFu
  ,"getFu":docs.getFu
  ,"formatFu":docs.formatFu
+ ,"dateTimeFu":docs.dateTimeFu
  
 });
 
