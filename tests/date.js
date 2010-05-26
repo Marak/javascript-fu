@@ -1,4 +1,4 @@
-
+var FuDate = require('../lib/date');
 var vows = require('../vows/lib/vows'),
     assert = require('assert');
 
@@ -16,3 +16,5 @@ vows.describe('format.js lib/date').addVows({
     }}
   }
 });
+
+sys.puts(FuDate.getParseFunction("1/2/3"));
