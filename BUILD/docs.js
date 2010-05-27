@@ -36,7 +36,10 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 
 {{{dateTimeFu}}}
 
+<h2>getFu</h2>
+<h4><em>the art of the swift getter</em></h3>
 
+{{{getFu}}}
 
 <h2>Authors</h2>
 
