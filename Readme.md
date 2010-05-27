@@ -9,7 +9,8 @@
       <h4><em>the deadly art of the monkey punch</em></h3>   
       <h2>dateTimeFu</h2>
       <h4><em>the art of time and space</em></h3>   
-      <br/>
+      <h2>getFu</h2>
+      <h4><em>the art of the swift getter</em></h3>
       <br/>
       <br/>
     </td>
@@ -290,8 +291,7 @@ now.format("UTC:h:MM:ss TT Z");
 		</tr>
 	</tbody>
 </table>
-<h2>getFu</h2>
-<h4><em>the art of the swift getter</em></h3>
+<h3>getFu - the art of the swift getter</h3>
 <ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getParseFunction</li><li>getSeconds</li><li>getTime</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li></ul>
 <h2>Authors</h2>
-<h4>Marak Squires, Aaron Blohowiak</h4>
+<h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
