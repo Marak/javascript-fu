@@ -22,7 +22,7 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 <ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
 <h3>toFu - the deadly art of the monkey punch</h3>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
-<ul><li>toCamel</li><li>toCanadian</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
+<ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
 <h3>dateTimeFu - the art of space and time</h3>
 dateTimeFu adds a new method "format" to the baked in JavaScript date object
 
@@ -292,6 +292,6 @@ now.format("UTC:h:MM:ss TT Z");
 	</tbody>
 </table>
 <h3>getFu - the art of the swift getter</h3>
-<ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getParseFunction</li><li>getSeconds</li><li>getTime</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li></ul>
+<ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getParseFunction</li><li>getSeconds</li><li>getTime</li><li>getKeys</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h2>Authors</h2>
 <h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
