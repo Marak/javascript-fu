@@ -1,14 +1,10 @@
 
 var sys = require('sys');
 
-exports.types = require('./lib/types');
-exports.string = require('./lib/string');
-exports.number = require('./lib/number');
-exports.format = require('./lib/format');
-exports.inflector = require('./lib/inflector');
-exports.date = require('./lib/date');
-exports.currency = require('./lib/currency');
-exports.data = require('./lib/data');
+exports.types = require('./lib/isFu');
+exports.string = require('./lib/toFu');
+exports.number = require('./lib/dateTimeFu');
+exports.format = require('./lib/getFu');
 
 // For convenience...
 Date.prototype.format = function (mask, utc) {
