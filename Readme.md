@@ -19,7 +19,7 @@
 <h2>the three disciplines of javascript-fu</h2>
 <h3>isFu - the art of the curious type checker</h3>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
-<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
+<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNaN</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
 <h3>toFu - the deadly art of the monkey punch</h3>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
