@@ -44,7 +44,8 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 <h3>getFu - the art of the swift getter</h3>
 {{{getFu}}}
 
-<h3>linqFu - the forbidden art of LINQ and querying JSON, liberated from...microsoft</h3>
+<h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>
+
 {{{linqFu}}}
 
 <h2>Authors</h2>

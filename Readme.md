@@ -297,6 +297,6 @@ now.format("UTC:h:MM:ss TT Z");
 </table>
 <h3>getFu - the art of the swift getter</h3>
 <ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
-<h3>linqFu - the forbidden art of LINQ and querying JSON, liberated from...microsoft</h3>
+<h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>
 <h2>Authors</h2>
 <h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
