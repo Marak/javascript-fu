@@ -13,7 +13,10 @@
       <h2>getFu</h2>
       <h4><em>the art of the swift getter</em></h3>
       <h2>linqFu</h2>
-      <h4><em>the forbidden art of LINQ and querying JSON, liberated from...microsoft</em></h3>
+      <h4>
+        <em>
+          the forbidden art of querying JSON<br/>
+          with LINQ, liberated from...microsoft</em></h3>
       <br/>
     </td>
   </tr>
