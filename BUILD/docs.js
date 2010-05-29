@@ -12,7 +12,8 @@
       <h4><em>the art of time and space</em></h3>   
       <h2>getFu</h2>
       <h4><em>the art of the swift getter</em></h3>
-      <br/>
+      <h2>linqFu</h2>
+      <h4><em>the forbidden art of LINQ and querying JSON, liberated from...microsoft</em></h3>
       <br/>
     </td>
   </tr>
