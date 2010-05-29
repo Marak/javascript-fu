@@ -1,6 +1,6 @@
 dateTimeFu adds a new method "format" to the baked in JavaScript date object
 
-
+<!--
 format() takes one argument, a formatting mask
 you can use some of the built in formatting masks such as ""
 
@@ -57,7 +57,7 @@ now.format("longTime", true);
 // ...Or add the prefix "UTC:" to your mask.
 now.format("UTC:h:MM:ss TT Z");
 // 10:46:21 PM UTC
-
+-->
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
