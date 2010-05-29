@@ -1,5 +1,88 @@
 dateTimeFu adds a new method "format" to the built in JavaScript Date object
 
+<a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
+
+format() takes one argument, a formatting mask<br/>
+you can use a pre-defined formatting mask, an inline custom mask. you can also create your own mask for reuse. 
+
+
+<h2>dateTime masks</h2>
+
+          var now = new Date();
+          now.format("shortDate");
+          7/1/10
+
+<table cellspacing="0" summary="Date Format named masks">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Mask</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>default</td>
+			<td>ddd mmm dd yyyy HH:MM:ss</td>
+			<td>Sat Jun 09 2007 17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortDate</td>
+			<td>m/d/yy</td>
+			<td>6/9/07</td>
+		</tr>
+		<tr>
+			<td>mediumDate</td>
+			<td>mmm d, yyyy</td>
+			<td>Jun 9, 2007</td>
+		</tr>
+		<tr class="altBg">
+			<td>longDate</td>
+			<td>mmmm d, yyyy</td>
+			<td>June 9, 2007</td>
+		</tr>
+		<tr>
+			<td>fullDate</td>
+			<td>dddd, mmmm d, yyyy</td>
+			<td>Saturday, June 9, 2007</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortTime</td>
+			<td>h:MM TT</td>
+			<td>5:46 PM</td>
+		</tr>
+		<tr>
+			<td>mediumTime</td>
+			<td>h:MM:ss TT</td>
+			<td>5:46:21 PM</td>
+		</tr>
+		<tr class="altBg">
+			<td>longTime</td>
+			<td>h:MM:ss TT Z</td>
+			<td>5:46:21 PM EST</td>
+		</tr>
+		<tr>
+			<td>isoDate</td>
+			<td>yyyy-mm-dd</td>
+			<td>2007-06-09</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoTime</td>
+			<td>HH:MM:ss</td>
+			<td>17:46:21</td>
+		</tr>
+		<tr>
+			<td>isoDateTime</td>
+			<td>yyyy-mm-dd'T'HH:MM:ss</td>
+			<td>2007-06-09T17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoUtcDateTime</td>
+			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
+			<td>2007-06-09T22:46:21Z</td>
+		</tr>
+	</tbody>
+</table>
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
@@ -131,79 +214,6 @@ dateTimeFu adds a new method "format" to the built in JavaScript Date object
 			<td><code>UTC:</code></td>
 			<td>Must be the first four characters of the mask. Converts the date from local time to UTC/GMT/Zulu time before applying the mask. The "UTC:" prefix is removed.<br>
 				<span class="small">No equivalent in CF.</span></td>
-		</tr>
-	</tbody>
-</table>
-
-
-<table cellspacing="0" summary="Date Format named masks">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Mask</th>
-			<th>Example</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>default</td>
-			<td>ddd mmm dd yyyy HH:MM:ss</td>
-			<td>Sat Jun 09 2007 17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortDate</td>
-			<td>m/d/yy</td>
-			<td>6/9/07</td>
-		</tr>
-		<tr>
-			<td>mediumDate</td>
-			<td>mmm d, yyyy</td>
-			<td>Jun 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>longDate</td>
-			<td>mmmm d, yyyy</td>
-			<td>June 9, 2007</td>
-		</tr>
-		<tr>
-			<td>fullDate</td>
-			<td>dddd, mmmm d, yyyy</td>
-			<td>Saturday, June 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortTime</td>
-			<td>h:MM TT</td>
-			<td>5:46 PM</td>
-		</tr>
-		<tr>
-			<td>mediumTime</td>
-			<td>h:MM:ss TT</td>
-			<td>5:46:21 PM</td>
-		</tr>
-		<tr class="altBg">
-			<td>longTime</td>
-			<td>h:MM:ss TT Z</td>
-			<td>5:46:21 PM EST</td>
-		</tr>
-		<tr>
-			<td>isoDate</td>
-			<td>yyyy-mm-dd</td>
-			<td>2007-06-09</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoTime</td>
-			<td>HH:MM:ss</td>
-			<td>17:46:21</td>
-		</tr>
-		<tr>
-			<td>isoDateTime</td>
-			<td>yyyy-mm-dd'T'HH:MM:ss</td>
-			<td>2007-06-09T17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoUtcDateTime</td>
-			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
-			<td>2007-06-09T22:46:21Z</td>
 		</tr>
 	</tbody>
 </table>
