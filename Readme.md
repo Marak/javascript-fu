@@ -23,10 +23,10 @@
 <h1>the five disciplines of javascript-fu</h1>
 <h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
-<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNaN</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
+<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li></ul>
 <h2>toFu - the deadly art of the monkey punch</h2>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
-<ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
+<ul><li>toCamel</li><li>toChain</li><li>toDash</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPercent</li><li>toPlural</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
 <h2>getFu - the art of the swift getter</h2>
 <ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h2>dateTimeFu - the art of space and time</h2>
@@ -253,7 +253,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 	</tbody>
 </table>
 
-<h2>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h2>
+<h2>linqFu - the forbidden art of querying JSON with LINQ, liberated from...<em>Microsoft</em></h2>
 <a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a> <br/>
 linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a> which is a pure javascript implementation of <em>gasp</em> Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> query language. it's very usefull for quickly querying JSON objects.
 ###simple Select
