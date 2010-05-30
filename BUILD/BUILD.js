@@ -141,7 +141,9 @@ for(var module in fuMethods){
       docs.formatFu += ( '<li>' + fM[method] + '</li>');
     break;
     case 'to':
-      docs.toFu += ( '<li>' + fM[method] + '</li>');
+      if(fM[method]!='token'){
+        docs.toFu += ( '<li>' + fM[method] + '</li>');
+      }
     break;
     default:
       //sys.puts('didnt find shit');

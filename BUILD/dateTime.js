@@ -1,63 +1,91 @@
-dateTimeFu adds a new method "format" to the baked in JavaScript date object
+<a href = "#">Try out the interactive demo of Date.format()</a>
+
+dateTimeFu adds a new method "format" to the built in JavaScript Date object
+
+Date.format() takes one argument, a formatting mask<br/>
+you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
+
+      var now = new Date();
+      now.format("shortDate"); // ouputs: 7/1/10
+      now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
 
-format() takes one argument, a formatting mask
-you can use some of the built in formatting masks such as ""
+<h3>pre-defined dateTime masks</h3>
 
-// create a new Date (which will return the the current date and time)
-var now = new Date();
+<table cellspacing="0" summary="Date Format named masks">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Mask</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>default</td>
+			<td>ddd mmm dd yyyy HH:MM:ss</td>
+			<td>Sat Jun 09 2010 17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortDate</td>
+			<td>m/d/yy</td>
+			<td>6/9/07</td>
+		</tr>
+		<tr>
+			<td>mediumDate</td>
+			<td>mmm d, yyyy</td>
+			<td>Jun 9, 2010</td>
+		</tr>
+		<tr class="altBg">
+			<td>longDate</td>
+			<td>mmmm d, yyyy</td>
+			<td>June 9, 2010</td>
+		</tr>
+		<tr>
+			<td>fullDate</td>
+			<td>dddd, mmmm d, yyyy</td>
+			<td>Saturday, June 9, 2010</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortTime</td>
+			<td>h:MM TT</td>
+			<td>5:46 PM</td>
+		</tr>
+		<tr>
+			<td>mediumTime</td>
+			<td>h:MM:ss TT</td>
+			<td>5:46:21 PM</td>
+		</tr>
+		<tr class="altBg">
+			<td>longTime</td>
+			<td>h:MM:ss TT Z</td>
+			<td>5:46:21 PM EST</td>
+		</tr>
+		<tr>
+			<td>isoDate</td>
+			<td>yyyy-mm-dd</td>
+			<td>2010-06-09</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoTime</td>
+			<td>HH:MM:ss</td>
+			<td>17:46:21</td>
+		</tr>
+		<tr>
+			<td>isoDateTime</td>
+			<td>yyyy-mm-dd'T'HH:MM:ss</td>
+			<td>2010-06-09T17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoUtcDateTime</td>
+			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
+			<td>2010-06-09T22:46:21Z</td>
+		</tr>
+	</tbody>
+</table>
 
-this will return the value of "Tue May 25 2010 22:59:09 GMT-0400 (EST)"
 
-  
-now that we have a DateTime object with the current date and time, we can format it
-
-now.format("m/dd/yy");
-// Returns, e.g., 6/09/07
-
-// Can also be used as a standalone function
-dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-// Saturday, June 9th, 2007, 5:46:21 PM
-
-// You can use one of several named masks
-now.format("isoDateTime");
-// 2007-06-09T17:46:21
-
-// ...Or add your own
-dateFormat.masks.hammerTime = 'HH:MM! "Can\'t touch this!"';
-now.format("hammerTime");
-// 17:46! Can't touch this!
-
-// When using the standalone dateFormat function,
-// you can also provide the date as a string
-dateFormat("Jun 9 2007", "fullDate");
-// Saturday, June 9, 2007
-
-// Note that if you don't include the mask argument,
-// dateFormat.masks.default is used
-now.format();
-// Sat Jun 09 2007 17:46:21
-
-// And if you don't include the date argument,
-// the current date and time is used
-dateFormat();
-// Sat Jun 09 2007 17:46:22
-
-// You can also skip the date argument (as long as your mask doesn't
-// contain any numbers), in which case the current date/time is used
-dateFormat("longTime");
-// 5:46:22 PM EST
-
-// And finally, you can convert local time to UTC time. Either pass in
-// true as an additional argument (no argument skipping allowed in this case):
-dateFormat(now, "longTime", true);
-now.format("longTime", true);
-// Both lines return, e.g., 10:46:21 PM UTC
-
-// ...Or add the prefix "UTC:" to your mask.
-now.format("UTC:h:MM:ss TT Z");
-// 10:46:21 PM UTC
-
+<h3>custom dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
@@ -189,79 +217,6 @@ now.format("UTC:h:MM:ss TT Z");
 			<td><code>UTC:</code></td>
 			<td>Must be the first four characters of the mask. Converts the date from local time to UTC/GMT/Zulu time before applying the mask. The "UTC:" prefix is removed.<br>
 				<span class="small">No equivalent in CF.</span></td>
-		</tr>
-	</tbody>
-</table>
-
-
-<table cellspacing="0" summary="Date Format named masks">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Mask</th>
-			<th>Example</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>default</td>
-			<td>ddd mmm dd yyyy HH:MM:ss</td>
-			<td>Sat Jun 09 2007 17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortDate</td>
-			<td>m/d/yy</td>
-			<td>6/9/07</td>
-		</tr>
-		<tr>
-			<td>mediumDate</td>
-			<td>mmm d, yyyy</td>
-			<td>Jun 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>longDate</td>
-			<td>mmmm d, yyyy</td>
-			<td>June 9, 2007</td>
-		</tr>
-		<tr>
-			<td>fullDate</td>
-			<td>dddd, mmmm d, yyyy</td>
-			<td>Saturday, June 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortTime</td>
-			<td>h:MM TT</td>
-			<td>5:46 PM</td>
-		</tr>
-		<tr>
-			<td>mediumTime</td>
-			<td>h:MM:ss TT</td>
-			<td>5:46:21 PM</td>
-		</tr>
-		<tr class="altBg">
-			<td>longTime</td>
-			<td>h:MM:ss TT Z</td>
-			<td>5:46:21 PM EST</td>
-		</tr>
-		<tr>
-			<td>isoDate</td>
-			<td>yyyy-mm-dd</td>
-			<td>2007-06-09</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoTime</td>
-			<td>HH:MM:ss</td>
-			<td>17:46:21</td>
-		</tr>
-		<tr>
-			<td>isoDateTime</td>
-			<td>yyyy-mm-dd'T'HH:MM:ss</td>
-			<td>2007-06-09T17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoUtcDateTime</td>
-			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
-			<td>2007-06-09T22:46:21Z</td>
 		</tr>
 	</tbody>
 </table>

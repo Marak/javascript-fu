@@ -4,86 +4,117 @@
     <td>
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
-      <h4><em>the art of the curious type checker</em></h3>   
+      <h4><em>the art of the curious type checker</em></h4>   
       <h2>toFu</h2>
-      <h4><em>the deadly art of the monkey punch</em></h3>   
-      <h2>dateTimeFu</h2>
-      <h4><em>the art of time and space</em></h3>   
+      <h4><em>the deadly art of the monkey punch</em></h4>   
       <h2>getFu</h2>
-      <h4><em>the art of the swift getter</em></h3>
-      <br/>
+      <h4><em>the art of the swift getter</em></h4>
+      <h2>dateTimeFu</h2>
+      <h4><em>the art of time and space</em></h4>   
+      <h2>linqFu</h2>
+      <h4><em>the forbidden art of querying JSON</em></h4>
       <br/>
     </td>
   </tr>
 </table>
-<h2>the three disciplines of javascript-fu</h2>
-<h3>isFu - the art of the curious type checker</h3>
+<h1>the five disciplines of javascript-fu</h1>
+<h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
-<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNaN</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
-<h3>toFu - the deadly art of the monkey punch</h3>
+<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNode</li><li>isNull</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li></ul>
+<h2>toFu - the deadly art of the monkey punch</h2>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
-<ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
-<h3>dateTimeFu - the art of space and time</h3>
-dateTimeFu adds a new method "format" to the baked in JavaScript date object
+<ul><li>toCamel</li><li>toChain</li><li>toDash</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPercent</li><li>toPlural</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toTrim</li><li>toUnderscore</li><li>toWrap</li></ul>
+<h2>getFu - the art of the swift getter</h2>
+<ul><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
+<h2>dateTimeFu - the art of space and time</h2>
+<a href = "#">Try out the interactive demo of Date.format()</a>
+
+dateTimeFu adds a new method "format" to the built in JavaScript Date object
+
+Date.format() takes one argument, a formatting mask<br/>
+you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
+
+      var now = new Date();
+      now.format("shortDate"); // ouputs: 7/1/10
+      now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
 
-format() takes one argument, a formatting mask
-you can use some of the built in formatting masks such as ""
+<h3>pre-defined dateTime masks</h3>
 
-// create a new Date (which will return the the current date and time)
-var now = new Date();
+<table cellspacing="0" summary="Date Format named masks">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Mask</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>default</td>
+			<td>ddd mmm dd yyyy HH:MM:ss</td>
+			<td>Sat Jun 09 2010 17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortDate</td>
+			<td>m/d/yy</td>
+			<td>6/9/07</td>
+		</tr>
+		<tr>
+			<td>mediumDate</td>
+			<td>mmm d, yyyy</td>
+			<td>Jun 9, 2010</td>
+		</tr>
+		<tr class="altBg">
+			<td>longDate</td>
+			<td>mmmm d, yyyy</td>
+			<td>June 9, 2010</td>
+		</tr>
+		<tr>
+			<td>fullDate</td>
+			<td>dddd, mmmm d, yyyy</td>
+			<td>Saturday, June 9, 2010</td>
+		</tr>
+		<tr class="altBg">
+			<td>shortTime</td>
+			<td>h:MM TT</td>
+			<td>5:46 PM</td>
+		</tr>
+		<tr>
+			<td>mediumTime</td>
+			<td>h:MM:ss TT</td>
+			<td>5:46:21 PM</td>
+		</tr>
+		<tr class="altBg">
+			<td>longTime</td>
+			<td>h:MM:ss TT Z</td>
+			<td>5:46:21 PM EST</td>
+		</tr>
+		<tr>
+			<td>isoDate</td>
+			<td>yyyy-mm-dd</td>
+			<td>2010-06-09</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoTime</td>
+			<td>HH:MM:ss</td>
+			<td>17:46:21</td>
+		</tr>
+		<tr>
+			<td>isoDateTime</td>
+			<td>yyyy-mm-dd'T'HH:MM:ss</td>
+			<td>2010-06-09T17:46:21</td>
+		</tr>
+		<tr class="altBg">
+			<td>isoUtcDateTime</td>
+			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
+			<td>2010-06-09T22:46:21Z</td>
+		</tr>
+	</tbody>
+</table>
 
-this will return the value of "Tue May 25 2010 22:59:09 GMT-0400 (EST)"
 
-  
-now that we have a DateTime object with the current date and time, we can format it
-
-now.format("m/dd/yy");
-// Returns, e.g., 6/09/07
-
-// Can also be used as a standalone function
-dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-// Saturday, June 9th, 2007, 5:46:21 PM
-
-// You can use one of several named masks
-now.format("isoDateTime");
-// 2007-06-09T17:46:21
-
-// ...Or add your own
-dateFormat.masks.hammerTime = 'HH:MM! "Can\'t touch this!"';
-now.format("hammerTime");
-// 17:46! Can't touch this!
-
-// When using the standalone dateFormat function,
-// you can also provide the date as a string
-dateFormat("Jun 9 2007", "fullDate");
-// Saturday, June 9, 2007
-
-// Note that if you don't include the mask argument,
-// dateFormat.masks.default is used
-now.format();
-// Sat Jun 09 2007 17:46:21
-
-// And if you don't include the date argument,
-// the current date and time is used
-dateFormat();
-// Sat Jun 09 2007 17:46:22
-
-// You can also skip the date argument (as long as your mask doesn't
-// contain any numbers), in which case the current date/time is used
-dateFormat("longTime");
-// 5:46:22 PM EST
-
-// And finally, you can convert local time to UTC time. Either pass in
-// true as an additional argument (no argument skipping allowed in this case):
-dateFormat(now, "longTime", true);
-now.format("longTime", true);
-// Both lines return, e.g., 10:46:21 PM UTC
-
-// ...Or add the prefix "UTC:" to your mask.
-now.format("UTC:h:MM:ss TT Z");
-// 10:46:21 PM UTC
-
+<h3>custom dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
@@ -219,79 +250,24 @@ now.format("UTC:h:MM:ss TT Z");
 	</tbody>
 </table>
 
-
-<table cellspacing="0" summary="Date Format named masks">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Mask</th>
-			<th>Example</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>default</td>
-			<td>ddd mmm dd yyyy HH:MM:ss</td>
-			<td>Sat Jun 09 2007 17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortDate</td>
-			<td>m/d/yy</td>
-			<td>6/9/07</td>
-		</tr>
-		<tr>
-			<td>mediumDate</td>
-			<td>mmm d, yyyy</td>
-			<td>Jun 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>longDate</td>
-			<td>mmmm d, yyyy</td>
-			<td>June 9, 2007</td>
-		</tr>
-		<tr>
-			<td>fullDate</td>
-			<td>dddd, mmmm d, yyyy</td>
-			<td>Saturday, June 9, 2007</td>
-		</tr>
-		<tr class="altBg">
-			<td>shortTime</td>
-			<td>h:MM TT</td>
-			<td>5:46 PM</td>
-		</tr>
-		<tr>
-			<td>mediumTime</td>
-			<td>h:MM:ss TT</td>
-			<td>5:46:21 PM</td>
-		</tr>
-		<tr class="altBg">
-			<td>longTime</td>
-			<td>h:MM:ss TT Z</td>
-			<td>5:46:21 PM EST</td>
-		</tr>
-		<tr>
-			<td>isoDate</td>
-			<td>yyyy-mm-dd</td>
-			<td>2007-06-09</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoTime</td>
-			<td>HH:MM:ss</td>
-			<td>17:46:21</td>
-		</tr>
-		<tr>
-			<td>isoDateTime</td>
-			<td>yyyy-mm-dd'T'HH:MM:ss</td>
-			<td>2007-06-09T17:46:21</td>
-		</tr>
-		<tr class="altBg">
-			<td>isoUtcDateTime</td>
-			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
-			<td>2007-06-09T22:46:21Z</td>
-		</tr>
-	</tbody>
-</table>
-<h3>getFu - the art of the swift getter</h3>
-<ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
+<h2>linqFu - the forbidden art of querying JSON with LINQ, liberated from...<em>Microsoft</em></h2>
+<a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a> <br/>
+linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a> which is a pure javascript implementation of <em>gasp</em> Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> query language. it's very usefull for quickly querying JSON objects.
+###simple Select
+    var sample = fu.linq(sampleData).
+      Select(function (item) {return item.FirstName;});
+    output: {"items":["Chris","Kate","Josh","John","Steve","Katie","Dirk","Chris","Bernard","Kate"]}
+###simple Select with OrderBy
+     var sample = fu.linq(sampleData).
+      Select(function (item) {return item.FirstName;}).
+      OrderBy(function (item) {return item;});
+     output: {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
+###simple Where 
+	var sample = fu.linq(sampleData).Where(function (item) {return item.FirstName == "Chris";});
+	output: [
+             {"ID":1,"FirstName":"Chris","LastName":"Pearson","BookIDs":[1001,1002,1003]},
+             {"ID":8,"FirstName":"Chris","LastName":"Stevenson","BookIDs":[4001,4002,4003]}
+            ]
+###For the Full JSLINQ Demo and API implementation goto @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
 <h2>Authors</h2>
 <h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
