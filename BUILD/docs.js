@@ -60,7 +60,7 @@
 
 once you have required the js-fu library, you have access to the "fu" object. inside this object you will find ...
  
-<h1>the five disciplines of javascript-fu</h1>
+<div align = "center"><h1>the five disciplines of javascript-fu</h1></div>
 <h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 <ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNode</li><li>isNull</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li></ul>
