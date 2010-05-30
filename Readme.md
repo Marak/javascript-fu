@@ -35,11 +35,12 @@ dateTimeFu adds a new method "format" to the built in JavaScript Date object
 Date.format() takes one argument, a formatting mask<br/>
 you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
 
-<h4>dateTime masks</h4>
+var now = new Date();
+now.format("shortDate"); // ouputs: 7/1/10
+now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
-          var now = new Date();
-          now.format("shortDate");
-          // ouputs: 7/1/10
+
+<h4>pre-defined dateTime masks</h4>
 
 <table cellspacing="0" summary="Date Format named masks">
 	<thead>
@@ -53,7 +54,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		<tr>
 			<td>default</td>
 			<td>ddd mmm dd yyyy HH:MM:ss</td>
-			<td>Sat Jun 09 2007 17:46:21</td>
+			<td>Sat Jun 09 2010 17:46:21</td>
 		</tr>
 		<tr class="altBg">
 			<td>shortDate</td>
@@ -63,17 +64,17 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		<tr>
 			<td>mediumDate</td>
 			<td>mmm d, yyyy</td>
-			<td>Jun 9, 2007</td>
+			<td>Jun 9, 2010</td>
 		</tr>
 		<tr class="altBg">
 			<td>longDate</td>
 			<td>mmmm d, yyyy</td>
-			<td>June 9, 2007</td>
+			<td>June 9, 2010</td>
 		</tr>
 		<tr>
 			<td>fullDate</td>
 			<td>dddd, mmmm d, yyyy</td>
-			<td>Saturday, June 9, 2007</td>
+			<td>Saturday, June 9, 2010</td>
 		</tr>
 		<tr class="altBg">
 			<td>shortTime</td>
@@ -93,7 +94,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		<tr>
 			<td>isoDate</td>
 			<td>yyyy-mm-dd</td>
-			<td>2007-06-09</td>
+			<td>2010-06-09</td>
 		</tr>
 		<tr class="altBg">
 			<td>isoTime</td>
@@ -103,12 +104,12 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		<tr>
 			<td>isoDateTime</td>
 			<td>yyyy-mm-dd'T'HH:MM:ss</td>
-			<td>2007-06-09T17:46:21</td>
+			<td>2010-06-09T17:46:21</td>
 		</tr>
 		<tr class="altBg">
 			<td>isoUtcDateTime</td>
 			<td>UTC:yyyy-mm-dd'T'HH:MM:ss'Z'</td>
-			<td>2007-06-09T22:46:21Z</td>
+			<td>2010-06-09T22:46:21Z</td>
 		</tr>
 	</tbody>
 </table>
