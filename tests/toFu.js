@@ -44,6 +44,82 @@ vows.describe('format.js lib/types').addVows({
          assert.ok( false, '"' + s + '"' + ' has not been reversed!');
        }
      }
+	},
+	"toMix()": {
+    "on an empty object and a full": {
+      topic: function () {return format.toFu.toMix({}, {"hello": "yes", "belief": "no"}); },
+      "Object has been mixed":function( res ){
+        if(format.isFu.isEqual(res, {"hello": "yes", "belief": "no"})){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + res + '"' + ' has not been mixed!');
+        }
+      }
+		},
+		"on two full objects": {
+      topic: function () {return format.toFu.toMix({"name": "carl"}, {"hello": "yes", "belief": "no"}); },
+      "Object has been mixed":function( res ){
+        if(format.isFu.isEqual(res, {"name": "carl", "hello": "yes", "belief": "no"})){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + res + '"' + ' has not been mixed!');
+        }
+      }
+		},
+		"on objects sharing methods": {
+      topic: function () {return format.toFu.toMix({"name": "carl", "number": 5}, {"hello": "yes", "belief": "no", "number": 6}); },
+      "Object has been mixed":function( res ){
+        if(format.isFu.isEqual(res, {"name": "carl", "hello": "yes", "belief": "no", "number": 6})){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' +  format.getFu.getKeys(res) + '"' + ' has not been mixed!');
+        }
+      }
+		},
+		"on objects sharing methods and deep copy": {
+      topic: function () {return format.toFu.toMix(true, {
+          apple: 0,
+          banana: {weight: 52, price: 100},
+          cherry: 97
+        }, 
+        {
+         banana: {price: 200},
+         durian: 100
+          }); 
+      },
+      "Object has been mixed":function( res ){
+        if(format.isFu.isEqual(res, {apple: 0, banana: {weight: 52, price: 200}, cherry: 97, durian: 100})){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + res + '"' + ' has not been mixed!');
+        }
+      }
+		},
+		"on objects sharing methods and deep copy with array": {
+      topic: function () {return format.toFu.toMix(true, {
+          apple: 0,
+          banana: {weight: 52, price: 100},
+          cherry: 97
+        }, 
+        {
+         banana: {price: 200},
+         durian: 100,
+         cherry: [1,2,3,4]
+          }); 
+      },
+      "Object has been mixed":function( res ){
+        if(format.isFu.isEqual(res, {apple: 0, banana: {weight: 52, price: 200}, cherry: [1,2,3,4], durian: 100})){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + res + '"' + ' has not been mixed!');
+        }
+      }
+		}
 	}
 });
 
