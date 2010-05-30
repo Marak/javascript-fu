@@ -1,4 +1,4 @@
-<a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
+<a href = "#">Try out the interactive demo of Date.format()</a>
 
 dateTimeFu adds a new method "format" to the built in JavaScript Date object
 

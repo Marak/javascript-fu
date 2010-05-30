@@ -30,7 +30,7 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 <h2>getFu - the art of the swift getter</h2>
 <ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h2>dateTimeFu - the art of space and time</h2>
-<a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
+<a href = "#">Try out the interactive demo of Date.format()</a>
 
 dateTimeFu adds a new method "format" to the built in JavaScript Date object
 
