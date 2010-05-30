@@ -5,7 +5,6 @@ exports.types = require('./lib/isFu');
 exports.string = require('./lib/toFu');
 exports.number = require('./lib/dateTimeFu');
 exports.format = require('./lib/getFu');
-exports.inflector = require('./lib/inflections');
 
 
 // For convenience...
