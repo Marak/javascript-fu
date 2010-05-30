@@ -4,18 +4,15 @@
     <td>
       <h1>javascript-fu</h1>
       <h2>isFu</h2>
-      <h4><em>the art of the curious type checker</em></h3>   
+      <h4><em>the art of the curious type checker</em></h4>   
       <h2>toFu</h2>
-      <h4><em>the deadly art of the monkey punch</em></h3>   
+      <h4><em>the deadly art of the monkey punch</em></h4>   
       <h2>getFu</h2>
-      <h4><em>the art of the swift getter</em></h3>
+      <h4><em>the art of the swift getter</em></h4>
       <h2>dateTimeFu</h2>
-      <h4><em>the art of time and space</em></h3>   
+      <h4><em>the art of time and space</em></h4>   
       <h2>linqFu</h2>
-      <h4>
-        <em>
-          the forbidden art of querying JSON<br/>
-          with LINQ, liberated from...microsoft</em></h3>
+      <h4><em>the forbidden art of querying JSON</em></h4>
       <br/>
     </td>
   </tr>
