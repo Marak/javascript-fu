@@ -5,7 +5,7 @@ var sys = require('sys');
 
 var format = require('../index');
 
-var inflector = format.string;
+var inflector = format.toFu;
 
 //to make porting from rails easier
 

@@ -9,7 +9,7 @@ vows.describe('format.js lib/getFu').addVows({
   "getKeys()": {
      topic: {key1: "87", key2: 87, key3: 98},
     "extracted keys":function( f ){
-      var result = format.format.getKeys( f );
+      var result = format.getFu.getKeys( f );
       if( result.join(", ") == "key1, key2, key3" ){
         assert.ok( true );
       }
@@ -21,7 +21,7 @@ vows.describe('format.js lib/getFu').addVows({
   "getValues()": {
      topic: {key1: "87", key2: 87, key3: 98},
     "extracted values":function( f ){
-      var result = format.format.getValues( f );
+      var result = format.getFu.getValues( f );
       if( result.join(", ") == "87, 87, 98" ){
         assert.ok( true );
       }
@@ -34,7 +34,7 @@ vows.describe('format.js lib/getFu').addVows({
     "on an Array":{
        topic: [1,2,3],
       "got first value":function( f ){
-        var result = format.format.getFirst( f );
+        var result = format.getFu.getFirst( f );
         if( result == 1 ){
           assert.ok( true );
         }
@@ -46,7 +46,7 @@ vows.describe('format.js lib/getFu').addVows({
     "on a string":{
        topic:' [1,2,3]',
       "got null":function( f ){
-        var result = format.format.getFirst( f );
+        var result = format.getFu.getFirst( f );
         if( result == null ){
           assert.ok( true );
         }
@@ -60,7 +60,7 @@ vows.describe('format.js lib/getFu').addVows({
     "on an Array":{
        topic: [1,2,3],
       "got last value":function( f ){
-        var result = format.format.getLast( f );
+        var result = format.getFu.getLast( f );
         if( result == 3 ){
           assert.ok( true );
         }
@@ -72,7 +72,7 @@ vows.describe('format.js lib/getFu').addVows({
     "on a string":{
        topic:' [1,2,3]',
       "got null":function( f ){
-        var result = format.format.getLast( f );
+        var result = format.getFu.getLast( f );
         if( result == null ){
           assert.ok( true );
         }
@@ -84,7 +84,7 @@ vows.describe('format.js lib/getFu').addVows({
   },
   "getIndexOf()": {
     "on an Array":{
-       topic: function(){ return format.format.getIndex([1,4,3], 4);},
+       topic: function(){ return format.getFu.getIndex([1,4,3], 4);},
       "got index value":function( res){
         if( res == 1){
           assert.ok( true );

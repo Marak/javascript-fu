@@ -46,7 +46,7 @@
 <h1>the five disciplines of javascript-fu</h1>
 <h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
-<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNode</li><li>isNull</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li></ul>
+<ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNaN</li><li>isNode</li><li>isNull</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li></ul>
 <h2>toFu - the deadly art of the monkey punch</h2>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toChain</li><li>toDash</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPercent</li><li>toPlural</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toTrim</li><li>toUnderscore</li><li>toWrap</li></ul>
