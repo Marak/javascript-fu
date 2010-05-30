@@ -23,10 +23,10 @@
 <p>javascript-fu is the culmination of years of training in the archaic art of javascript. through meticulously studying the following ancient scrolls we have divined the ultimate form of javascript martial arts. </p>
 <ul>
  <li>
- Underscore.js <a href = "http://github.com/documentcloud/underscore" target = "_blank">http://github.com/documentcloud/underscore</a>
+ <a href = "http://github.com/documentcloud/underscore" target = "_blank">Underscore.js</a>
  </li>
  <li>
- jQuery.js <a href = "http://jquery.com/" target = "_blank">http://jquery.com/</a>
+  <a href = "http://jquery.com/" target = "_blank">jQuery.js</a>
  </li>
  <li>
   <a href = "http://www.datejs.com/" target = "_blank">date.js</a>
