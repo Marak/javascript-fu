@@ -7,6 +7,19 @@ var sys = require('sys');
 var format = require('../index');
 
 vows.describe('format.js lib/types').addVows({
+  "toChain()": {
+    "on an Number": {      
+      topic: function () {return format.JsFu("42").chain().toNumber().end();},
+      "Number has been chained":function( res ){
+        if( res == 42){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + format.getFu.getKeys(res) + '"' + ' has not been reversed!' + res);
+        }
+      }
+		}
+	},
   "toReverse()": {
     "on an array": {
       topic: [1,2,3,4,5],
@@ -120,7 +133,7 @@ vows.describe('format.js lib/types').addVows({
         }
       }
 		}
-	}
+	},
 });
 
 sys.puts(format.toFu.toShuffle([1,2]));
