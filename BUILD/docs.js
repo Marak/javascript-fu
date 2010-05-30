@@ -18,7 +18,7 @@
   </tr>
 </table>
 <h1>what is javascript-fu?</h1>
-<p>javascript-fu (or js-fu) is a martial arts discipline (library) for node.js and the browser. through mastering the art of javascript-fu you will be a nimble, yet powerful JavaScript developer. a true javascript-fu master can avoid the bad parts of javascript with ninja-like agility and perform quick and devastating blows to produce robust, succinct code that covers a myriad of common functionalities.</p>
+<p>javascript-fu is a martial arts discipline (library) for node.js and the browser. through mastering the art of javascript-fu you will be a nimble, yet powerful JavaScript developer. a true javascript-fu master can avoid the bad parts of javascript with ninja-like agility and perform quick and devastating blows to produce robust, succinct code that covers a myriad of common functionalities.</p>
 <h1>where did javascript-fu come from?</h1>
 <p>javascript-fu is the culmination of years of training in the archaic art of javascript. through meticulously studying the following ancient scrolls we have divined the ultimate form of javascript martial arts. </p>
 <ul>
