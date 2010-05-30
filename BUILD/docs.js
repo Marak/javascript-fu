@@ -22,20 +22,20 @@
   </tr>
 </table>
 
-<h2>the three disciplines of javascript-fu</h2>
-<h3>isFu - the art of the curious type checker</h3>
+<h1>the five disciplines of javascript-fu</h1>
+<h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 {{{isFu}}}
 
-<h3>toFu - the deadly art of the monkey punch</h3>
+<h2>toFu - the deadly art of the monkey punch</h2>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 {{{toFu}}}
 
-<h3>getFu - the art of the swift getter</h3>
+<h2>getFu - the art of the swift getter</h2>
 {{{getFu}}}
 
 
-<h3>dateTimeFu - the art of space and time</h3>
+<h2>dateTimeFu - the art of space and time</h2>
 {{{dateTimeFu}}}
 
 <h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>

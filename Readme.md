@@ -20,16 +20,16 @@
     </td>
   </tr>
 </table>
-<h2>the three disciplines of javascript-fu</h2>
-<h3>isFu - the art of the curious type checker</h3>
+<h1>the five disciplines of javascript-fu</h1>
+<h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
 <ul><li>isArray</li><li>isBoolean</li><li>isDate</li><li>isDefined</li><li>isEmpty</li><li>isEqual</li><li>isFunction</li><li>isJSON</li><li>isNaN</li><li>isNode</li><li>isNumber</li><li>isObject</li><li>isRegExp</li><li>isString</li><li>isText</li><li>isTime</li></ul>
-<h3>toFu - the deadly art of the monkey punch</h3>
+<h2>toFu - the deadly art of the monkey punch</h2>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
-<h3>getFu - the art of the swift getter</h3>
+<h2>getFu - the art of the swift getter</h2>
 <ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
-<h3>dateTimeFu - the art of space and time</h3>
+<h2>dateTimeFu - the art of space and time</h2>
 <a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
 
 dateTimeFu adds a new method "format" to the built in JavaScript Date object
