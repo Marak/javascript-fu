@@ -28,19 +28,18 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
 <h3>dateTimeFu - the art of space and time</h3>
-dateTimeFu adds a new method "format" to the built in JavaScript Date object
-
 <a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
 
-format() takes one argument, a formatting mask<br/>
-you can use a pre-defined formatting mask, an inline custom mask. you can also create your own mask for reuse. 
+dateTimeFu adds a new method "format" to the built in JavaScript Date object
 
+Date.format() takes one argument, a formatting mask<br/>
+you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
 
-<h2>dateTime masks</h2>
+<h4>dateTime masks</h4>
 
           var now = new Date();
           now.format("shortDate");
-          7/1/10
+          // ouputs: 7/1/10
 
 <table cellspacing="0" summary="Date Format named masks">
 	<thead>

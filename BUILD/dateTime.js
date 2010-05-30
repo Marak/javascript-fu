@@ -1,16 +1,15 @@
-dateTimeFu adds a new method "format" to the built in JavaScript Date object
-
 <a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
 
-format() takes one argument, a formatting mask<br/>
-you can use a pre-defined formatting mask, an inline custom mask. you can also create your own mask for reuse. 
+dateTimeFu adds a new method "format" to the built in JavaScript Date object
 
+Date.format() takes one argument, a formatting mask<br/>
+you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
 
-<h2>dateTime masks</h2>
+<h4>dateTime masks</h4>
 
           var now = new Date();
           now.format("shortDate");
-          7/1/10
+          // ouputs: 7/1/10
 
 <table cellspacing="0" summary="Date Format named masks">
 	<thead>
