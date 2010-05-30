@@ -32,7 +32,7 @@
   date.js <a href = "http://www.datejs.com/" target = "_blank">http://www.datejs.com/</a>
  </li>
  <li>
- Rails Inflectors <a href = "http://rails.rubyonrails.org/classes/Inflector.html" target = "_blank">http://rails.rubyonrails.org/classes/Inflector.html</a>
+ <a href = "http://webcache.googleusercontent.com/search?q=cache:AW7__qeq1xMJ:api.rubyonrails.org/classes/Inflector.html+rails+inflectors&cd=1&hl=en&ct=clnk&gl=us" target = "_blank">Rails Inflectors</a>
  </li>
  <li>
  Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a> 
