@@ -35,9 +35,9 @@ dateTimeFu adds a new method "format" to the built in JavaScript Date object
 Date.format() takes one argument, a formatting mask<br/>
 you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
 
-var now = new Date();
-now.format("shortDate"); // ouputs: 7/1/10
-now.format("mm/dd/yyyy"); // outputs: 07/01/2010
+      var now = new Date();
+      now.format("shortDate"); // ouputs: 7/1/10
+      now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
 
 <h4>pre-defined dateTime masks</h4>
