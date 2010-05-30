@@ -10,7 +10,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
       now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
 
-<h4>pre-defined dateTime masks</h4>
+<h3>pre-defined dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format named masks">
 	<thead>
@@ -83,6 +83,9 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		</tr>
 	</tbody>
 </table>
+
+
+<h3>custom dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>

@@ -7,10 +7,10 @@
       <h4><em>the art of the curious type checker</em></h3>   
       <h2>toFu</h2>
       <h4><em>the deadly art of the monkey punch</em></h3>   
-      <h2>dateTimeFu</h2>
-      <h4><em>the art of time and space</em></h3>   
       <h2>getFu</h2>
       <h4><em>the art of the swift getter</em></h3>
+      <h2>dateTimeFu</h2>
+      <h4><em>the art of time and space</em></h3>   
       <h2>linqFu</h2>
       <h4>
         <em>
@@ -27,6 +27,8 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 <h3>toFu - the deadly art of the monkey punch</h3>
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toCanadian</li><li>toChain</li><li>toDash</li><li>toDimes</li><li>toDollars</li><li>toEuros</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNickels</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPennies</li><li>toPercent</li><li>toPlural</li><li>toQuarters</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toUnderscore</li><li>toWrap</li><li>toDate</li><li>token</li></ul>
+<h3>getFu - the art of the swift getter</h3>
+<ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h3>dateTimeFu - the art of space and time</h3>
 <a href = "http://maraksquires.com/javascript-fu/demos/">Try out the interactive demo of Date.format()</a>
 
@@ -40,7 +42,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
       now.format("mm/dd/yyyy"); // outputs: 07/01/2010
 
 
-<h4>pre-defined dateTime masks</h4>
+<h3>pre-defined dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format named masks">
 	<thead>
@@ -113,6 +115,9 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 		</tr>
 	</tbody>
 </table>
+
+
+<h3>custom dateTime masks</h3>
 
 <table cellspacing="0" summary="Date Format mask metasequences">
 	<thead>
@@ -248,8 +253,6 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 	</tbody>
 </table>
 
-<h3>getFu - the art of the swift getter</h3>
-<ul><li>getDate</li><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getTime</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>
 <h2>Authors</h2>
 <h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
