@@ -29,7 +29,7 @@
  jQuery.js <a href = "http://jquery.com/" target = "_blank">http://jquery.com/</a>
  </li>
  <li>
-  date.js <a href = "http://www.datejs.com/" target = "_blank">http://www.datejs.com/</a>
+  <a href = "http://www.datejs.com/" target = "_blank">date.js</a>
  </li>
  <li>
  <a href = "http://webcache.googleusercontent.com/search?q=cache:AW7__qeq1xMJ:api.rubyonrails.org/classes/Inflector.html+rails+inflectors&cd=1&hl=en&ct=clnk&gl=us" target = "_blank">Rails Inflectors</a>
