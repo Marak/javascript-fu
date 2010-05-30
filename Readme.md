@@ -17,6 +17,32 @@
     </td>
   </tr>
 </table>
+<h1>what is javascript-fu?</h1>
+<p>javascript-fu (or js-fu) is a martial arts discipline (library) for node.js and the browser. through mastering the art of javascript-fu you will be a nimble, yet powerful JavaScript developer. a true javascript-fu master can avoid the bad parts of javascript with ninja-like agility and perform quick and devastating blows to produce robust, succinct code that covers a myriad of common functionalities.</p>
+<h1>where did javascript-fu come from?</h1>
+<p>javascript-fu is the culmination of years of training in the archaic art of javascript. through meticulously studying the following ancient scrolls we have divined the ultimate form of javascript martial arts. </p>
+<ul>
+ <li>
+ Underscore.js <a href = "http://github.com/documentcloud/underscore" target = "_blank">http://github.com/documentcloud/underscore</a>
+ </li>
+ <li>
+ jQuery.js <a href = "http://jquery.com/" target = "_blank">http://jquery.com/</a>
+ </li>
+ <li>
+ LINQ <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">http://en.wikipedia.org/wiki/Language_Integrated_Query</a>
+ </li>
+ <li>
+ Rails Inflectors <a href = "http://rails.rubyonrails.org/classes/Inflector.html" target = "_blank">http://rails.rubyonrails.org/classes/Inflector.html</a>
+ </li>
+ <li>
+  date.js <a href = "http://www.datejs.com/" target = "_blank">http://www.datejs.com/</a>
+ </li>
+ <li>
+ Coldfusions <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a> 
+ </li>
+ 
+</ul>
+ 
 <h1>the five disciplines of javascript-fu</h1>
 <h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
