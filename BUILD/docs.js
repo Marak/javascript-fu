@@ -39,7 +39,7 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 {{{dateTimeFu}}}
 
 <h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>
-<a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a>
+<a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a> <br/>
 
 linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a> which is a pure javascript implementation of <em>gasp</em> Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> query language. it's very usefull for quickly querying JSON objects.
 
