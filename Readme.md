@@ -253,7 +253,7 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 	</tbody>
 </table>
 
-<h3>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h3>
+<h2>linqFu - the forbidden art of querying JSON with LINQ, liberated from...microsoft</h2>
 <a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a> <br/>
 linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a> which is a pure javascript implementation of <em>gasp</em> Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> query language. it's very usefull for quickly querying JSON objects.
 ###simple Select
