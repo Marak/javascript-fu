@@ -38,7 +38,7 @@
  Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a> 
  </li>
  <li>
- LINQ <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">http://en.wikipedia.org/wiki/Language_Integrated_Query</a>
+ Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">LINQ</a>
  </li>
 </ul>
 
