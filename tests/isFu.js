@@ -284,16 +284,78 @@ vows.describe('format.js lib/types').addVows({
       }
     }
   },
-  "isDate()": {
-    "on a date instance": {
-      topic: new Date(),
-      "this is a date":function( s ){
-        var result = format.types.isDate( s );
+  "isBoolean()": {
+    "on a true instance": {
+      topic: true,
+      "this is a boolean":function( s ){
+        var result = format.types.isBoolean( s );
         if( result ){
           assert.ok( true );
         }
         else{
-          assert.ok( false, '"' + s + '"' + ' is not a date');
+          assert.ok( false, '"' + s + '"' + ' is not a boolean');
+        }
+      }
+    },
+    "on a false instance": {
+      topic: false,
+      "this is a boolean":function( s ){
+        var result = format.types.isBoolean(false);
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a boolean');
+        }
+      }
+    },
+    "on a string instance": {
+      topic: "true",
+      "this is a boolean":function( s ){
+        var result = format.types.isBoolean( s );
+        if( !result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is a boolean');
+        }
+      }
+    },
+  },
+  "isEmpty()": {
+    "on a string instance": {
+      topic: "",
+      "this is empty":function( s ){
+        var result = format.types.isEmpty( s );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a empty');
+        }
+      }
+    },
+    "on a array instance": {
+      topic: [],
+      "this is empty":function( s ){
+        var result = format.types.isEmpty( s );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a empty');
+        }
+      }
+    },
+    "on a object instance": {
+      topic:{},
+      "this is empty":function( s ){
+        var result = format.types.isEmpty( s );
+        if( result ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + s + '"' + ' is not a empty');
         }
       }
     }

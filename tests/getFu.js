@@ -29,6 +29,71 @@ vows.describe('format.js lib/getFu').addVows({
         assert.ok( false, '"' + result.join(", ") + '"' + ' are not the values');
       }
     }
+  },
+  "getFirst()": {
+    "on an Array":{
+       topic: [1,2,3],
+      "got first value":function( f ){
+        var result = format.format.getFirst( f );
+        if( result == 1 ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + result.join(", ") + '"' + ' is not the first value');
+        }
+      }
+    },
+    "on a string":{
+       topic:' [1,2,3]',
+      "got null":function( f ){
+        var result = format.format.getFirst( f );
+        if( result == null ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + result.join(", ") + '"' + ' is  not null');
+        }
+      }
+    }
+  },
+  "getLast()": {
+    "on an Array":{
+       topic: [1,2,3],
+      "got last value":function( f ){
+        var result = format.format.getLast( f );
+        if( result == 3 ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + result.join(", ") + '"' + ' is not the first value');
+        }
+      }
+    },
+    "on a string":{
+       topic:' [1,2,3]',
+      "got null":function( f ){
+        var result = format.format.getLast( f );
+        if( result == null ){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + result.join(", ") + '"' + ' is  not null');
+        }
+      }
+    }
+  },
+  "getIndexOf()": {
+    "on an Array":{
+       topic: function(){ return format.format.getIndex([1,4,3], 4);},
+      "got index value":function( res){
+        if( res == 1){
+          assert.ok( true );
+        }
+        else{
+          assert.ok( false, '"' + result.join(", ") + '"' + ' is not the index');
+        }
+      }
+    }
   }
 
 });
