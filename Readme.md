@@ -21,26 +21,16 @@
 <p>javascript-fu is a martial arts discipline (library) for node.js and the browser. through mastering the art of javascript-fu you will be a nimble, yet powerful JavaScript developer. a true javascript-fu master can avoid the bad parts of javascript with ninja-like agility and perform quick and devastating blows to produce robust, succinct code that covers a myriad of common functionalities.</p>
 <h3>where did javascript-fu come from?</h3>
 <p>javascript-fu is the culmination of years of training in the archaic art of javascript. through meticulously studying the following ancient scrolls we have divined the ultimate form of javascript martial arts. </p>
-<ul>
- <li>
+
+<p>
  <a href = "http://github.com/documentcloud/underscore" target = "_blank">Underscore.js</a>
- </li>
- <li>
   <a href = "http://jquery.com/" target = "_blank">jQuery.js</a>
- </li>
- <li>
   <a href = "http://www.datejs.com/" target = "_blank">date.js</a>
- </li>
- <li>
  <a href = "http://webcache.googleusercontent.com/search?q=cache:AW7__qeq1xMJ:api.rubyonrails.org/classes/Inflector.html+rails+inflectors&cd=1&hl=en&ct=clnk&gl=us" target = "_blank">Rails Inflectors</a>
- </li>
- <li>
  Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a> 
  </li>
  <li>
  Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">LINQ</a>
- </li>
-</ul>
 
 
 <h2>how do i use javascript-fu?</h2>
