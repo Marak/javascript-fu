@@ -16,9 +16,6 @@ Date.prototype.format = function (mask, utc) {
 
 sys.puts(JSON.stringify(exports));
 
-var ArrayProto = Array.prototype, ObjProto = Object.prototype;
-
-
 // Create a safe reference to the Underscore object for use below.
 exports.JsFu = function(obj) { return new wrapper(obj); }
     
@@ -39,7 +36,7 @@ exports.JsFu = function(obj) { return new wrapper(obj); }
   var addToWrapper = function(name, func) {
     wrapper.prototype[name] = function() {
       var args = root.toFu.toArray(arguments);
-      ArrayProto.unshift.call(args, this._wrapped);
+      Array.prototype.unshift.call(args, this._wrapped);
       return result(func.apply(root.JsFu, args), this._chain);
     };
   };
