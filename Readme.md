@@ -23,14 +23,8 @@
 <p>javascript-fu is the culmination of years of training in the archaic art of javascript. through meticulously studying the following ancient scrolls we have divined the ultimate form of javascript martial arts. </p>
 
 <p>
- <a href = "http://github.com/documentcloud/underscore" target = "_blank">Underscore.js</a>
-  <a href = "http://jquery.com/" target = "_blank">jQuery.js</a>
-  <a href = "http://www.datejs.com/" target = "_blank">date.js</a>
- <a href = "http://webcache.googleusercontent.com/search?q=cache:AW7__qeq1xMJ:api.rubyonrails.org/classes/Inflector.html+rails+inflectors&cd=1&hl=en&ct=clnk&gl=us" target = "_blank">Rails Inflectors</a>
- Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a> 
- </li>
- <li>
- Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">LINQ</a>
+ <a href = "http://github.com/documentcloud/underscore" target = "_blank">Underscore.js</a>, <a href = "http://jquery.com/" target = "_blank">jQuery.js</a>, <a href = "http://www.datejs.com/" target = "_blank">date.js</a>, <a href = "http://webcache.googleusercontent.com/search?q=cache:AW7__qeq1xMJ:api.rubyonrails.org/classes/Inflector.html+rails+inflectors&cd=1&hl=en&ct=clnk&gl=us" target = "_blank">Rails Inflectors</a>, 
+Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a>, <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a>, Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">LINQ</a>
 
 
 <h2>how do i use javascript-fu?</h2>
