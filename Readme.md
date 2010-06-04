@@ -28,7 +28,7 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
 
 
 <h2>how do i use javascript-fu?</h2>
-<a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>'
+<a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>
 
 <h3>browser</h3>
   
