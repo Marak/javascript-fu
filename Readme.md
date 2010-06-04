@@ -284,21 +284,30 @@ you can use a pre-defined formatting mask or an inline mask. you can also define
 <h2>linqFu - the forbidden art of querying JSON with LINQ, liberated from...<em>Microsoft</em></h2>
 <a href = "http://maraksquires.com/JSLINQ/">Try out the interactive demo of JSLINQ</a> <br/>
 linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a> which is a pure javascript implementation of <em>gasp</em> Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query">LINQ</a> query language. it's very usefull for quickly querying JSON objects.
-###simple Select
+
+<h3>simple Select</h3>
     var sample = fu.linq(sampleData).
       Select(function (item) {return item.FirstName;});
     output: {"items":["Chris","Kate","Josh","John","Steve","Katie","Dirk","Chris","Bernard","Kate"]}
-###simple Select with OrderBy
+    
+    
+<h3>simple Select with OrderBy</h3>
+<pre>
      var sample = fu.linq(sampleData).
       Select(function (item) {return item.FirstName;}).
       OrderBy(function (item) {return item;});
      output: {"items":["Bernard","Chris","Chris","Dirk","John","Josh","Kate","Kate","Katie","Steve"]}
-###simple Where 
-	var sample = fu.linq(sampleData).Where(function (item) {return item.FirstName == "Chris";});
-	output: [
+</pre>     
+     
+<h3>simple Where</h3> 
+<pre>
+  var sample = fu.linq(sampleData).Where(function (item) {return item.FirstName == "Chris";});
+  output: [
              {"ID":1,"FirstName":"Chris","LastName":"Pearson","BookIDs":[1001,1002,1003]},
              {"ID":8,"FirstName":"Chris","LastName":"Stevenson","BookIDs":[4001,4002,4003]}
             ]
-###For the Full JSLINQ Demo and API implementation goto @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)
+</pre>
+            
+<h3>For the Full JSLINQ Demo and API implementation goto @ [http://maraksquires.com/JSLINQ/](http://maraksquires.com/JSLINQ/)</h3>
 <h2>Authors</h2>
 <h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>
