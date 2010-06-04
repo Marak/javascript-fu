@@ -32,19 +32,19 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
 <a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>
 
 <h3>browser</h3>
-  <pre>
-      &lt;script src = "js-fu.js" type = "text/javascript"&gt;&lt;/script&gt;
-      &lt;script&gt;
-        var x = fu.isNumber(13); // true
-        var x = fu.isDate('07/01/2010'); // true
-      &lt;/script&gt;
-  </pre>    
+<pre>
+  &lt;script src = "js-fu.js" type = "text/javascript"&gt;&lt;/script&gt;
+  &lt;script&gt;
+    var x = fu.isNumber(13); // true
+    var x = fu.isDate('07/01/2010'); // true
+  &lt;/script&gt;
+</pre>    
 <h3>node.js</h3>
 
 <pre>
-      var fu = require('./js-fu');
-      var x = fu.isNumber(13); // true
-      var x = fu.isDate('07/01/2010'); // true
+  var fu = require('./js-fu');
+  var x = fu.isNumber(13); // true
+  var x = fu.isDate('07/01/2010'); // true
 </pre>
 once you have required the js-fu library, you have access to the "fu" object. inside this object you will find ...
  
@@ -63,12 +63,12 @@ toFu methods will accept <em>anything</em> as an argument and aggressively attem
 dateTimeFu adds a new method "format" to the built in JavaScript Date object
 
 Date.format() takes one argument, a formatting mask<br/>
-you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks
-
+you can use a pre-defined formatting mask or an inline mask. you can also define new re-usable masks<br/>
+<pre>
       var now = new Date();
       now.format("shortDate"); // ouputs: 7/1/10
       now.format("mm/dd/yyyy"); // outputs: 07/01/2010
-
+</pre>
 
 <h3>pre-defined dateTime masks</h3>
 
