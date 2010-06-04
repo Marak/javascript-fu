@@ -30,20 +30,20 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
 <h2>how do i use javascript-fu?</h2>
 <a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>
 
-<h3>browser</h3>
-  
+
+<code>  
             <script src = "js-fu.js" type = "text/javascript"></script>
             <script>
               var x = fu.isNumber(13); // true
               var x = fu.isDate('07/01/2010'); // true
             </script>
       
-<h3>node.js </h3> 
+
 
             var fu = require('./js-fu');
             var x = fu.isNumber(13); // true
             var x = fu.isDate('07/01/2010'); // true
-
+</code>
 once you have required the js-fu library, you have access to the "fu" object. inside this object you will find ...
  
 <div align = "center"><h1>the five disciplines of javascript-fu</h1></div>
