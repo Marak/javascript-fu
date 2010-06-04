@@ -32,16 +32,17 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
 
 <h3>browser</h3>
   
-      <script src = "js-fu.js" type = "text/javascript"></script>
-      <script>
-        var x = fu.isNumber(13); // true
-        var x = fu.isDate('07/01/2010'); // true
-      </script>
+            <script src = "js-fu.js" type = "text/javascript"></script>
+            <script>
+              var x = fu.isNumber(13); // true
+              var x = fu.isDate('07/01/2010'); // true
+            </script>
       
 <h3>node.js </h3> 
-      var fu = require('./js-fu');
-      var x = fu.isNumber(13); // true
-      var x = fu.isDate('07/01/2010'); // true
+
+            var fu = require('./js-fu');
+            var x = fu.isNumber(13); // true
+            var x = fu.isDate('07/01/2010'); // true
 
 once you have required the js-fu library, you have access to the "fu" object. inside this object you will find ...
  
