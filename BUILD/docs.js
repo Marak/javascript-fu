@@ -30,7 +30,7 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
 <h2>how do i use javascript-fu?</h2>
 <a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>
 
-<h3>browser</h3>
+### browser
   
       <script src = "js-fu.js" type = "text/javascript"></script>
       <script>
@@ -38,7 +38,8 @@ Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhe
         var x = fu.isDate('07/01/2010'); // true
       </script>
       
-<h3>node.js </h3> 
+### node.js
+
       var fu = require('./js-fu');
       var x = fu.isNumber(13); // true
       var x = fu.isDate('07/01/2010'); // true
