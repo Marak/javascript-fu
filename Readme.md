@@ -27,26 +27,26 @@
 Coldfusion's <a href = "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">DateFormat</a> and <a href "http://www.adobe.com/livedocs/coldfusion/7/htmldocs/wwhelp/wwhimpl/common/html/wwhelp.htm?context=ColdFusion_Documentation&file=00000441.htm" target = "_blank">TimeFormat</a>, Microsoft's <a href = "http://en.wikipedia.org/wiki/Language_Integrated_Query" target = "_blank">LINQ</a>
 
 
-<!--
+
 <h2>how do i use javascript-fu?</h2>
 <a href = "http://maraksquires.com/javascript-fu/">if you don't like reading documentation, check out the interactive javascript-fu demo</a>
 
 ### browser
-  
-      <script src = "js-fu.js" type = "text/javascript"></script>
-      <script>
+  <pre>
+      &lt;script src = "js-fu.js" type = "text/javascript"&gt;&lt;/script&gt;
+      &lt;script&gt;
         var x = fu.isNumber(13); // true
         var x = fu.isDate('07/01/2010'); // true
-      </script>
-      
+      &lt;/script&gt;
+  </pre>    
 ### node.js
-
+<pre>
       var fu = require('./js-fu');
       var x = fu.isNumber(13); // true
       var x = fu.isDate('07/01/2010'); // true
-
+</pre>
 once you have required the js-fu library, you have access to the "fu" object. inside this object you will find ...
---> 
+ 
 <div align = "center"><h1>the five disciplines of javascript-fu</h1></div>
 <h2>isFu - the art of the curious type checker</h2>
 isFu methods will accept <em>anything</em> as an argument and gracefully return true or false depending on if the arguments match the type you have checked for
