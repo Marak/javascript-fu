@@ -310,4 +310,4 @@ linqFu is adds the <a href = "http://github.com/marak/jslinq">JSLINQ project</a>
             
 <h3>For the Full JSLINQ Demo and API implementation goto @ <a href = "http://maraksquires.com/JSLINQ/">http://maraksquires.com/JSLINQ/</a></h3>
 <h2>Authors</h2>
-<h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>     
+<h4>Marak Squires, Aaron Blohowiak, Matthew Bergman</h4>      
