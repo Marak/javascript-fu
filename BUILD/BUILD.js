@@ -1,3 +1,6 @@
+/* javascript-fu build script - Marak Squires 2010 */
+/* running this file will generate the js-fu.js bundle */
+
 var sys = require('sys')
    , fs = require('fs')
    , M = require('./Mustache')
@@ -6,20 +9,7 @@ var sys = require('sys')
 
 var ChildProcess = require('child_process');
 
-/*
-// run tests
-child = exec('cd ../tests/ && make' , function (error, stdout, stderr) {
-  sys.print('stdout: ' + stdout);
-  if (error !== null) {
-    sys.puts('exec error: ' + error);
-  }
-  else{
-  
-  }
-});
-*/
-
-var code = '';
+var code = {};
 var docs = {};
 
 docs.main = '';
@@ -27,64 +17,37 @@ docs.API = '';
 docs.dateTimeFu = '';
 
 // read in the the main.js file as our main boilerplate code 
-code += fs.readFileSync('./main.js', encoding='utf8');
-code = M.Mustache.to_html(code, {"today":new Date().getTime()});
+code.main = '';
+code.main += fs.readFileSync('./main.js', encoding='utf8');
+code.main = M.Mustache.to_html(code.main, {"today":new Date().getTime()});
 
 docs.main += fs.readFileSync('./docs.js', encoding='utf8');
 docs.dateTimeFu += fs.readFileSync('./dateTime.js', encoding='utf8');
 
-// parse entire lib directory and concat it into one file for the browser
-var lib = paths('./lib');
+// require the entire library as a CommonJS module. we are going to iterate over the CommonJS structure and generate a bundle 
+var fu = require('../index');
 
-
-var fu= require('../index');
-
-/*
-function moduleTree(level, context){
-  
-  if( typeof context == 'undefined'){
-    var context = 'fu';
-  }
-  
-  // generate bundle for code on the browser
-  for(var module in level){
-    code += ( '\n' + module + ' = {};');
-    for(var method in level[module]){
-      code += ( '\n' + module);
-      code += ( '.' + method + ' = ');
-      if( typeof level[module][method] == 'object'){
-        moduleTree( level[module][method]);
-      }
-      else{
-        try{
-          code += (level[module][method].toString() + ';\n');
-        }
-        catch(err){
-          code += ('fiiii' + ';\n');
-          
-        }
-      }
-    }
-  }
-}
-*/
-
-code += ('\n');
+code.main += ('\n');
 
 var fuMethods = {};
 
 function moduleTree( level, context ){
+ 
   for(var module in level){
     fuMethods[module] = [];
     for(var method in level[module]){
-      if( typeof level[module][method] == 'object'){
-        moduleTree( level[module][method]);
+
+      if(typeof level[module][method] == 'object'){
+        //moduleTree(level[module][method]);
       }
       else{
-       fuMethods[module].push(method);
-       code += ( 'fu.' + method + ' = ');
-       code += (level[module][method].toString() + ';\n');
+
+        fuMethods[module].push(method);
+        code.main += ( 'fu.' + method + ' = ');
+        code.main += (level[module][method].toString() + ';\n');
+
       }
+
     }
     fuMethods[module] = fuMethods[module].sort();
   }
@@ -145,8 +108,10 @@ for(var module in fuMethods){
         docs.toFu += ( '<li>' + fM[method] + '</li>');
       }
     break;
+    
     default:
-      //sys.puts('didnt find shit');
+      //sys.puts('didnt find shit ' + fM[method].toString());
+    break;
     }
   }
   //docs.toFu += ( method + '</ul>');
@@ -160,15 +125,15 @@ docs.getFu += ('</ul>');
 
 // exports hack for dual sided stuff
 // if we are running in a CommonJS env, export everything out
-code += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
-code += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
+code.main += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
+code.main += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
 // generate some samples sets (move this code to another section)
-fs.writeFile('../js-fu.js', code, function() {
+fs.writeFile('../js-fu.js', code.main, function() {
   sys.puts("js-fu.js generated successfully!");
 });
 
 // generate library for demos
-fs.writeFile('../examples/js/js-fu.js', code, function() {
+fs.writeFile('../examples/js/js-fu.js', code.main, function() {
   sys.puts("../examples/js/js-fu.js generated successfully!");
 });
 

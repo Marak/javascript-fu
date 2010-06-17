@@ -6,6 +6,8 @@ var sys = require('sys');
 
 var format = require('../index');
 
+function isNaN(){return true;};
+
 vows.describe('format.js lib/types').addVows({
   "isDefined()": {
     "on nothing": {
