@@ -18,11 +18,11 @@ docs.dateTimeFu = '';
 
 // read in the the main.js file as our main boilerplate code 
 code.main = '';
-code.main += fs.readFileSync('./main.js', encoding='utf8');
+code.main += fs.readFileSync('./code/index.js', encoding='utf8');
 code.main = M.Mustache.to_html(code.main, {"today":new Date().getTime()});
 
-docs.main += fs.readFileSync('./docs.js', encoding='utf8');
-docs.dateTimeFu += fs.readFileSync('./dateTime.js', encoding='utf8');
+docs.main += fs.readFileSync('./docs/index.js', encoding='utf8');
+docs.dateTimeFu += fs.readFileSync('./docs/dateTime.js', encoding='utf8');
 
 // require the entire library as a CommonJS module. we are going to iterate over the CommonJS structure and generate a bundle 
 var fu = require('../index');
