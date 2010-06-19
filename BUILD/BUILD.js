@@ -12,57 +12,66 @@ var ChildProcess = require('child_process');
 var code = {};
 var docs = {};
 
-docs.main = '';
-docs.API = '';
-docs.dateTimeFu = '';
-
-// read in the the main.js file as our main boilerplate code 
+/* setup code object */
 code.main = '';
 code.main += fs.readFileSync('./code/index.js', encoding='utf8');
 code.main = M.Mustache.to_html(code.main, {"today":new Date().getTime()});
 
-docs.main += fs.readFileSync('./docs/index.js', encoding='utf8');
-docs.dateTimeFu += fs.readFileSync('./docs/dateTime.js', encoding='utf8');
-
 // require the entire library as a CommonJS module. we are going to iterate over the CommonJS structure and generate a bundle 
 var fu = require('../index');
 
-code.main += ('\n');
+code.main += ('\n\n'); // maybe we can remove this 
 
-var fuMethods = {};
-
+// moduleTree will take in a CommonJS module loop through it creating a JS code bundle (generates new JS code)
+// currently this is hardcoded / customized to work only with the js-fu library
 function moduleTree( level, context ){
- 
   for(var module in level){
     fuMethods[module] = [];
     for(var method in level[module]){
-
       if(typeof level[module][method] == 'object'){
         //moduleTree(level[module][method]);
       }
       else{
-
         fuMethods[module].push(method);
         code.main += ( 'fu.' + method + ' = ');
         code.main += (level[module][method].toString() + ';\n');
-
       }
-
     }
     fuMethods[module] = fuMethods[module].sort();
   }
 }
 
+// create object that will hold all our js-fu methods for bundle
+var fuMethods = {};
 moduleTree(fu, 'fu');
 
+// exports hack for dual sided stuff
+// if we are running in a CommonJS env, export everything out
+code.main += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
+code.main += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
+// generate some samples sets (move this code to another section)
+fs.writeFile('../js-fu.js', code.main, function() {
+  sys.puts("js-fu.js generated successfully!");
+});
+
+// generate library for demos
+fs.writeFile('../examples/js/js-fu.js', code.main, function() {
+  sys.puts("../examples/js/js-fu.js generated successfully!");
+});
+
+
+/* setup docs object */
+docs.main = '';
+docs.API = '';
+docs.dateTimeFu = '';
+docs.main += fs.readFileSync('./docs/index.js', encoding='utf8');
+docs.dateTimeFu += fs.readFileSync('./docs/dateTime.js', encoding='utf8');
 sys.puts(JSON.stringify(fuMethods));
 
 // instead of building the library in a linear fashion, we are going to split up methods
 // based on their fu discipline
 // store the methods in a variable as we parse
-
 function docsTree(level){
-
   // generate nice tree of api for docs
   docs.API += '<ul>';
   for(var method in level){
@@ -121,22 +130,6 @@ docs.isFu += ('</ul>');
 docs.toFu += ('</ul>');
 docs.formatFu += ('</ul>');
 docs.getFu += ('</ul>');
-
-
-// exports hack for dual sided stuff
-// if we are running in a CommonJS env, export everything out
-code.main += 'if(typeof exports != "undefined"){for(var prop in fu){exports[prop] = fu[prop];}}';
-code.main += 'Date.prototype.format = function (mask, utc) {return fu.dateFormat(this, mask, utc);}';
-// generate some samples sets (move this code to another section)
-fs.writeFile('../js-fu.js', code.main, function() {
-  sys.puts("js-fu.js generated successfully!");
-});
-
-// generate library for demos
-fs.writeFile('../examples/js/js-fu.js', code.main, function() {
-  sys.puts("../examples/js/js-fu.js generated successfully!");
-});
-
 
 var docOutput = M.Mustache.to_html(docs.main, {
   "API":docs.API
