@@ -1,5 +1,5 @@
 
-var vows = require('../vows/lib/vows'),
+var vows = require('vows'),
     assert = require('assert');
 
 var sys = require('sys');
@@ -8,14 +8,14 @@ var format = require('../index');
 
 function isNaN(){return true;};
 
-vows.describe('format.js lib/types').addVows({
+vows.describe('format.js lib/types').addBatch({
   "isDefined()": {
     "on nothing": {
       topic: '',
       "undefined is not defined":function( s ){
         var result = format.isFu.isDefined(  );
         if( !result ){
-          assert.ok( true );
+          assert.isTrue( true );
         }
         else{
           assert.ok( false, '"' + s + '"' + ' is defined!');
@@ -714,4 +714,4 @@ vows.describe('format.js lib/types').addVows({
       }
     }
   }
-});
+}).run();

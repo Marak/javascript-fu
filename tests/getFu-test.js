@@ -1,11 +1,11 @@
-var vows = require('../vows/lib/vows'),
+var vows = require('vows'),
     assert = require('assert');
 
 var sys = require('sys');
 
 var format = require('../index');
 
-vows.describe('format.js lib/getFu').addVows({
+vows.describe('format.js lib/getFu').addBatch({
   "getKeys()": {
      topic: {key1: "87", key2: 87, key3: 98},
     "extracted keys":function( f ){
@@ -96,4 +96,4 @@ vows.describe('format.js lib/getFu').addVows({
     }
   }
 
-});
+}).run();

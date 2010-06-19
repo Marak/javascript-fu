@@ -1,12 +1,12 @@
 
-var vows = require('../vows/lib/vows'),
+var vows = require('vows'),
     assert = require('assert');
 
 var sys = require('sys');
 
 var format = require('../index');
 
-vows.describe('format.js lib/types').addVows({
+vows.describe('format.js lib/types').addBatch({
   "toReverse()": {
     "on an array": {
       topic: [1,2,3,4,5],
@@ -121,7 +121,7 @@ vows.describe('format.js lib/types').addVows({
       }
 		}
 	}
-});
+}).run();
 
 sys.puts(format.toFu.toShuffle([1,2]));
 sys.puts(format.toFu.toShuffle(12332424));

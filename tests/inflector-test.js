@@ -1,4 +1,4 @@
-var vows = require('../vows/lib/vows'),
+var vows = require('vows'),
 	assert = require('assert');
 
 var sys = require('sys');
@@ -68,5 +68,5 @@ testSuiteBuilder("toDash", [cases.UnderscoresToDashes]);
 testSuiteBuilder("toOrdinal", [cases.OrdinalNumbers]);
 testSuiteBuilder("toParam", [cases.StringToParameterized])
 
-vows.describe('format.js lib/inflector').addVows(myVows);
+vows.describe('format.js lib/inflector').addBatch(myVows).run();
 
