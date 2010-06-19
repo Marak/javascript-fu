@@ -122,7 +122,7 @@ vows.describe('format.js lib/types').addBatch({
 		}
 	}
 }).export(module);
-
+/*
 sys.puts(format.toFu.toShuffle([1,2]));
 sys.puts(format.toFu.toShuffle(12332424));
 sys.puts(format.toFu.toShuffle("I am a very model man of model major general"));
@@ -130,3 +130,4 @@ sys.puts(format.toFu.toShuffle("I am a very model man of model major general"));
 sys.puts(format.toFu.toReverse([1,2,3,4,5]));
 sys.puts(format.toFu.toReverse(12332424));
 sys.puts(format.toFu.toReverse("I am a very model man of model major general"));
+*/
