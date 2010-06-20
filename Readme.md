@@ -56,7 +56,7 @@ isFu methods will accept <em>anything</em> as an argument and gracefully return 
 toFu methods will accept <em>anything</em> as an argument and aggressively attempt to coerce the value into the type you have specified 
 <ul><li>toCamel</li><li>toChain</li><li>toDash</li><li>toHuman</li><li>toJSON</li><li>toLink</li><li>toMix</li><li>toNumber</li><li>toOrdinal</li><li>toParam</li><li>toPercent</li><li>toPlural</li><li>toReverse</li><li>toShuffle</li><li>toSingle</li><li>toTitle</li><li>toTrim</li><li>toUnderscore</li><li>toWrap</li></ul>
 <h2>getFu - the art of the swift getter</h2>
-<ul><li>getMinutes</li><li>getMonth</li><li>getSeconds</li><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
+<ul><li>getFirst</li><li>getFunctions</li><li>getIndex</li><li>getKeys</li><li>getLast</li><li>getLeft</li><li>getLinks</li><li>getNode</li><li>getRandom</li><li>getRight</li><li>getValues</li></ul>
 <h2>dateTimeFu - the art of space and time</h2>
 <a href = "#">Try out the interactive demo of Date.format()</a><br/>
 
