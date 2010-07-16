@@ -29,7 +29,36 @@ vows.describe('format.js lib/getFu').addBatch({
         assert.ok( false, '"' + result.join(", ") + '"' + ' are not the values');
       }
     }
+  },
+  "getRight()": {
+     topic: "I am a very model of a model major general",
+    "extracted right of string":function( string ){
+      var result = format.getFu.getRight(string, 7);
+     assert.equal(result, "very model of a model major general");
+    }
+  },
+  "getLeft()": {
+     topic: "I am a very model of a model major general",
+    "extracted left of string":function( string ){
+      var result = format.getFu.getLeft(string, 7);
+     assert.equal(result, "general");
+    }
+  },
+  "getIndex()": {
+    "on complex object": {
+       topic: ["I", "am", "a", [1,2,3]],
+      "extracted index if complex object from arra":function( array ){
+        var result = format.getFu.getIndex(array, [1,2,3]);
+       assert.equal(result, 3);
+      }
+    },
+    "on complex object": {
+       topic: ["I", "am", "a", [1,2,3]],
+      "extracted index if simple object from arra":function( array ){
+        var result = format.getFu.getIndex(array, "am");
+       assert.equal(result, 1);
+      }
+    }
   }
 
-
-}).export(module);
+}).run();
